@@ -1,3 +1,3 @@
-# XRR on SIRIUS
+# Data analysis on SIRIUS
 
-This Jupyter Book is a tutorial on the data collection and analysis of X-Ray Reflectivity collected on the beamline SIRIUS.
+This Jupyter Book is a tutorial on the analysis of data acquired on the beamline SIRIUS.

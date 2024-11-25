@@ -1,4 +1,4 @@
-# About GenX
+# Analyzing XRR with GenX
 
 ## What is GenX?
 

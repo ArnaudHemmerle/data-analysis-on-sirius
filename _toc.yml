@@ -4,16 +4,18 @@
 format: jb-book
 root: home
 parts:
-  - caption: Introduction
+  - caption: X-Ray Reflectivity
     chapters:
-      - file: chapters/introduction/generalities
-  - caption: Data analysis with Genx
-    chapters:
-      - file: chapters/genx/about
-      - file: chapters/genx/getting-started
-      - file: chapters/genx/beam-parameters
-      - file: chapters/genx/build-model
-      - file: chapters/genx/examples
+      - file: chapters/xrr/introduction/generalities
+      - file: chapters/xrr/genx/about
+        sections:
+        - file: chapters/xrr/genx/getting-started
+        - file: chapters/xrr/genx/import-data
+        - file: chapters/xrr/genx/beam-parameters
+        - file: chapters/xrr/genx/build-model
+        - file: chapters/xrr/genx/fit
+        - file: chapters/xrr/genx/export
+        - file: chapters/xrr/genx/examples
   - caption: Appendices
     chapters:
       - file: chapters/appendices/bibliography
