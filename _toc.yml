@@ -1,0 +1,19 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: home
+parts:
+  - caption: Introduction
+    chapters:
+      - file: chapters/introduction/generalities
+  - caption: Data analysis with Genx
+    chapters:
+      - file: chapters/genx/about
+      - file: chapters/genx/getting-started
+      - file: chapters/genx/beam-parameters
+      - file: chapters/genx/build-model
+      - file: chapters/genx/examples
+  - caption: Appendices
+    chapters:
+      - file: chapters/appendices/bibliography
