@@ -4,7 +4,7 @@
 title: X-Ray Reflectivity on SIRIUS
 author: Arnaud HEMMERLE (Synchrotron SOLEIL)
 copyright: "2024" # Copyright year to be placed in the footer
-logo: images/resized-logo-SIRIUS.jpg
+logo: _static/resized-logo-SIRIUS.jpg
 # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
 exclude_patterns: [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints"]
 # Auto-exclude files not in the toc
