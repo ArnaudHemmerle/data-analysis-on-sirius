@@ -85,3 +85,5 @@ The simplest way to use the `f` parameter (the x-ray scattering length per formu
 
 ### Neutrons
 Leave all the other parameters, which are relevant only for neutrons, set to $0$.
+
+If you've missed any steps, you can download the updated file [here](../../../_static/water_ready_for_fit.hgx).
