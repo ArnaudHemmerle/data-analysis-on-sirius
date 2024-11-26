@@ -12,8 +12,8 @@ parts:
         - file: chapters/xrr/genx/import-data
         - file: chapters/xrr/genx/beam-parameters
         - file: chapters/xrr/genx/sample-parameters
-        - file: chapters/xrr/genx/build-model
         - file: chapters/xrr/genx/fit
+        - file: chapters/xrr/genx/build-model
         - file: chapters/xrr/genx/export
         - file: chapters/xrr/genx/examples
   - caption: Appendices
