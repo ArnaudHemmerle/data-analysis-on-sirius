@@ -1,4 +1,0 @@
-# Generalities on XRR
-
-
-dfsdfs

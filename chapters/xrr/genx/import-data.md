@@ -62,6 +62,6 @@ Click on the thunder icon to simulate the curve and compare it to the data. If t
 
 ![](images/import-data-first-simulation.png)
 
-The match between the simulation and the data should be fairly good, except for large q vectors. Next, we'll discuss how to verify the beam parameters in GenX and optimize the model parameters for better agreement.
+The match between the simulation and the data should be fairly good, except for large q vectors. Next, we'll discuss how to verify the beam parameters in GenX.
 
 If you've missed any steps, you can download the updated file [here](../../../_static/water_first_simu.hgx).
