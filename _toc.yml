@@ -4,7 +4,7 @@
 format: jb-book
 root: home
 parts:
-  - caption: X-Ray Reflectivity
+  - caption: XRR
     chapters:
       - file: chapters/xrr/genx/about
         sections:
@@ -13,9 +13,25 @@ parts:
         - file: chapters/xrr/genx/beam-parameters
         - file: chapters/xrr/genx/sample-parameters
         - file: chapters/xrr/genx/fit
-        - file: chapters/xrr/genx/build-model
         - file: chapters/xrr/genx/export
+        - file: chapters/xrr/genx/build-model
         - file: chapters/xrr/genx/examples
+      - file: chapters/xrr/refnx/about
+  - caption: GIWAXS (to be done)
+    chapters:
+      - file: chapters/giwaxs/gidvis/about
+  - caption: GISAXS (to be done)
+    chapters:
+      - file: chapters/gisaxs/bornagain/about
+  - caption: XRF (to be done)
+    chapters:
+      - file: chapters/xrf/pymca/about
+  - caption: GIXD (to be done)
+    chapters:
+      - file: chapters/gixd/jupygixd/about
+  - caption: GIXOS (to be done)
+    chapters:
+      - file: chapters/gixos/notebook/about
   - caption: Appendices
     chapters:
       - file: chapters/appendices/bibliography

@@ -2,7 +2,7 @@
 
 Now we will proceed with a more complex system than a simple liquid-gas interface. We will build the model step-by-step and estimate the initial guesses for the various parameters.
 
-The data correspond to a monolayer of the phospholipid DPPS (1,2-Dipalmitoyl-sn-glycero-3-phosphoserine, 16:0/16:0 PS), at the helium-water interface, at an area-per-molecule of 0.38 nm$^2$ (surface pressure of 40 mN/m). The data file can be downloaded [here](../../../_static/SIRIUS_2024_09_20_4556-4640_XRR.dat). We will start with a simple GenX file where the data have already been imported, available [here](../../../_static/dpps_init.hgx).
+The data correspond to a monolayer of the phospholipid DPPS (1,2-Dipalmitoyl-sn-glycero-3-phosphoserine, 16:0/16:0 PS), at the helium-water interface, at an area-per-molecule of 0.38 nm$^2$ (surface pressure of 40 mN/m). The data file can be downloaded [here](../../../_static/xrr/genx/SIRIUS_2024_09_20_4556-4640_XRR.dat) (right-click>Save link as). We will start with a simple GenX file where the data have already been imported, available [here](../../../_static/xrr/genx/dpps_init.hgx).
 
 ## Model the lipid
 
@@ -16,7 +16,7 @@ The signal measured in XRR is dictated by electron density **contrast** between 
 
 ## Fill the sample parameters
 
-Go to the `sample` tab, click on `Sub`, and then on the icon `Insert a Stack`.
+Go to the `Sample` tab, click on `Sub`, and then on the icon `Insert a Stack`.
 
 ![](images/build-model-insert-stack.png)
 
@@ -95,7 +95,7 @@ You need to set the roughness of the water sub-phase to $3$ $\rm A$, and set it 
 Your sample tab should look like this:
 ![](images/build-model-sample-done.png)
 
-If you've missed any steps, you can download the updated file [here](../../../_static/dpps_ready_for_fit.hgx).
+If you've missed any steps, you can download the updated file [here](../../../_static/xrr/genx/dpps_ready_for_fit.hgx).
 
 ## Playing with the parameters
 
@@ -133,4 +133,4 @@ Start the fit by clicking the Arrow icon in the top bar. After some time, you'll
 
 Finally, click on the calculator icon to estimate the error for each parameter.
 
-Export, file missed steps
+If you've missed any steps, you can download the updated file [here](../../../_static/xrr/genx/dpps_fit_done.hgx).

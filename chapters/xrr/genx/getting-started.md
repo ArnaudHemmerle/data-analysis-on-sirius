@@ -1,6 +1,6 @@
 # Getting started
 
-In this tutorial, we begin with a pre-defined, nearly empty file. You can download the GenX file [here](../../../_static/water_init.hgx).
+In this tutorial, we begin with a pre-defined, nearly empty file. You can download the GenX file [here](../../../_static/xrr/genx/water_init.hgx).
 
 ## Startup
 

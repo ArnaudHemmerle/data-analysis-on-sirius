@@ -30,7 +30,7 @@ Once the fit is complete, click the calculator icon in the top bar to estimate t
 
 ![](images/fit-done.png)
 
-Here, the result is $\sigma = 3.16$ $\rm A$, with an asymmetric error bar: $\sigma_{inf} = 3.16 - 0.08 = 3.08$ $\rm A$ and $\sigma_{sup} = 3.16 + 0.04 = 3.2$ $\rm A$.
+Here, the result is $\sigma = 3.14$ $\rm A$, with an asymmetric error bar: $\sigma_{inf} = 3.14 - 0.06 \simeq 3.1$ $\rm A$ and $\sigma_{sup} = 3.14 + 0.07 \simeq 3.2$ $\rm A$.
 
 ## SLD
 
@@ -38,4 +38,4 @@ In the `SLD` tab, you can view the Scattering Length Density profile (essentiall
 
 ![](images/fit-sld.png)
 
-If you've missed any steps, you can download the updated file [here](../../../_static/water_fit_done.hgx).
+If you've missed any steps, you can download the updated file [here](../../../_static/xrr/genx/water_fit_done.hgx).

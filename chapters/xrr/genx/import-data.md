@@ -1,26 +1,28 @@
 # Import data
 
-In this section, we'll learn how to import XRR data obtained on SIRIUS. Example data acquired from a helium-water interface can be downloaded [here](../../../_static/SIRIUS_2022_09_29_0696-0737_XRR.dat).
+In this section, we'll learn how to import XRR data obtained on SIRIUS. Example data acquired from a helium-water interface can be downloaded [here](../../../_static/xrr/genx/SIRIUS_2024_09_20_4446-4530_XRR.dat) (right-click>Save link as).
 
 ## Create an empty dataset
 
-First, create an empty dataset to host the data that will be imported by clicking on the `+` symbol.
+First, create an empty dataset to host the data that will be imported by clicking on the + symbol.
 
 ![](images/import-data-new-data.png)
 
 A new dataset named `Data 2` should appear below `Sim0`.
 
-Next, delete the `Sim0` dataset, as it won't be needed. Select `Sim0` and click on the `x` symbol.
+Next, delete the `Sim0` dataset, as it won't be needed. Select `Sim0` and click on the X symbol.
 
 ![](images/import-data-delete-sim0.png)
 
-## Configure import options
+## Configure import options: only for files before 2024
 
-Now, configure GenX to understand the structure of the data file you want to import. Looking at the downloaded file, you'll notice it has 11 columns, but not all of them are necessary for plotting the reflectivity curve.
+*If your data have been acquired in 2024 or later, you can skip this part and directly go to **Import the data file**. You can skip this part for the file used in this tutorial.*
+
+Depending on the structure of your data file, you need to configure GenX to understand the structure of the file you want to import. Looking at the file header below, you'll notice it has 11 columns, but not all of them are necessary for plotting the reflectivity curve.
 
 ![](images/import-data-structure-file.png)
 
-Go to the menu `Settings/Import/` to set up the data loader. In GenX, column numbering starts at 0 (the first column is column 0). Configure the following:
+In such a case, you need to go to the menu `Settings/Import/` to set up the data loader. In GenX, column numbering starts at 0 (the first column is column 0). With this data file, you would configure the following:
 
 - **Intensity**: Column `#refl` (number 10)
 - **Error on Intensity**: Column `#err_refl` (number 9)
@@ -36,7 +38,7 @@ Select the `Data 2` dataset and click on the import icon to load the data file.
 
 ![](images/import-data-import-data.png)
 
-Choose and import the file `SIRIUS_2022_09_29_0696-0737_XRR.dat`. The data should appear in blue in the preview window.
+Choose and import the file `SIRIUS_2024_09_20_4446-4530_XRR.dat`. The data should appear in blue in the preview window.
 
 ![](images/import-data-raw-data.png)
 
@@ -56,6 +58,8 @@ In some cases, error bars might be larger than the corresponding data points. Th
 
 ![](images/import-data-toggle-error.png)
 
+In the data set used for this example, you do not need to deactivate the error bars.
+
 ## Simulate the results
 
 Click on the thunder icon to simulate the curve and compare it to the data. If the curve isn't fully visible, right-click on the plot and select `Zoom All` to adjust the view.
@@ -64,4 +68,4 @@ Click on the thunder icon to simulate the curve and compare it to the data. If t
 
 The match between the simulation and the data should be fairly good, except for large q vectors. Next, we'll discuss how to verify the beam parameters in GenX.
 
-If you've missed any steps, you can download the updated file [here](../../../_static/water_first_simu.hgx).
+If you've missed any steps, you can download the updated file [here](../../../_static/xrr/genx/water_first_simu.hgx).

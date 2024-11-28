@@ -1,6 +1,6 @@
 # Sample parameters
 
-Now we will learn through this simple example what each parameter means, how you can tune them, and how the different displays work.
+Now we will learn through the same simple example what each parameter means, how you can tune them, and how the different displays work.
 
 ## Sample tab
 
@@ -59,7 +59,7 @@ $$
 
 #### *Link with the electron density: example of a lipid head*
 
-A more natural unit for density in XRR studies of soft matter systems is the electron density, $\rho_{el}$ (number of electrons per unit volume). A useful reference is the electron density of water: $\rho_{el} = 0.33 \, \rm{e}^{-}/\rm{A}^{3}$. Later in this tutorial, you will see that one of the outputs of GenX is the electron density profile, which provides $\rho_{el}$ as a function of $z$, the depth in your sample.
+We will deal more precisely with the case of a lipid at the gas-water interface in the section `Build a more complex model`. But we will use the opportunity of this tutorial to make the link between GenX density and a more natural unit for density in XRR studies of soft matter systems, the electron density, $\rho_{el}$ (number of electrons per unit volume). A useful reference is the electron density of water: $\rho_{el} = 0.33 \, \rm{e}^{-}/\rm{A}^{3}$. Later in this tutorial, you will see that one of the outputs of GenX is the electron density profile, which provides $\rho_{el}$ as a function of $z$, the depth in your sample.
 
 If you know the electron density in $\rm{e}^{-}/\rm{A}^{3}$ and the number of electrons ${n_{el}}$ in the formula unit, the parameter `dens` can be calculated using:
 
@@ -86,4 +86,4 @@ The simplest way to use the `f` parameter (the x-ray scattering length per formu
 ### Neutrons
 Leave all the other parameters, which are relevant only for neutrons, set to $0$.
 
-If you've missed any steps, you can download the updated file [here](../../../_static/water_ready_for_fit.hgx).
+If you've missed any steps, you can download the updated file [here](../../../_static/xrr/genx/water_ready_for_fit.hgx).

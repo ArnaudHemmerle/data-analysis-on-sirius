@@ -24,7 +24,7 @@ Configure the following parameters:
 - **tthoff**: $0$
 - **incangle**: $0.5$
 
-## X-resolution & footprint
+## X-resolution & footprint : optional
 
 Accounting for experimental resolution and footprint effects is beyond the scope of this tutorial. In most cases, you can achieve satisfactory results without considering these effects. The resolution is only significant if your data show numerous well-defined oscillations, and the footprint effect becomes relevant if your sample is smaller than the projected beam footprint near the critical angle. For most XRR experiments at liquid-gas interfaces, these parameters are not necessary, but they may be important for solid samples. If needed, consult beamline staff or relevant literature for additional details {cite:p}`daillant2009a, vignaud2019`.
 
