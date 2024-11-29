@@ -27,8 +27,10 @@ parts:
         - file: chapters/giwaxs/gidvis/getting-started
         - file: chapters/giwaxs/gidvis/import-data
         - file: chapters/giwaxs/gidvis/beam-parameters
-        - file: chapters/giwaxs/gidvis/calibration
         - file: chapters/giwaxs/gidvis/convert-q-space
+        - file: chapters/giwaxs/gidvis/merge
+        - file: chapters/giwaxs/gidvis/calibration
+        - file: chapters/giwaxs/gidvis/export-save
         - file: chapters/giwaxs/gidvis/troubleshooting
       - file: chapters/giwaxs/extra/references
   - caption: GISAXS (to be done)
