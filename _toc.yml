@@ -15,11 +15,22 @@ parts:
         - file: chapters/xrr/genx/fit
         - file: chapters/xrr/genx/export
         - file: chapters/xrr/genx/build-model
+        - file: chapters/xrr/genx/unknown-model
         - file: chapters/xrr/genx/examples
+        - file: chapters/xrr/genx/troubleshooting
       - file: chapters/xrr/refnx/about
-  - caption: GIWAXS (to be done)
+      - file: chapters/xrr/extra/references
+  - caption: GIWAXS (in progress)
     chapters:
       - file: chapters/giwaxs/gidvis/about
+        sections:
+        - file: chapters/giwaxs/gidvis/getting-started
+        - file: chapters/giwaxs/gidvis/import-data
+        - file: chapters/giwaxs/gidvis/beam-parameters
+        - file: chapters/giwaxs/gidvis/calibration
+        - file: chapters/giwaxs/gidvis/convert-q-space
+        - file: chapters/giwaxs/gidvis/troubleshooting
+      - file: chapters/giwaxs/extra/references
   - caption: GISAXS (to be done)
     chapters:
       - file: chapters/gisaxs/bornagain/about

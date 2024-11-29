@@ -42,6 +42,7 @@ Choose and import the file `SIRIUS_2024_09_20_4446-4530_XRR.dat`. The data shoul
 
 ![](images/import-data-raw-data.png)
 
+(genx-correct-q)=
 ## Correct q units
 
 Notice that GenX plots data using q in $A^{-1}$, while the data is in ${\rm nm}^{-1}$. To convert the units, select the `New Data` dataset and click on the calculator icon.
