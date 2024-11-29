@@ -31,6 +31,7 @@ parts:
         - file: chapters/giwaxs/gidvis/merge
         - file: chapters/giwaxs/gidvis/calibration
         - file: chapters/giwaxs/gidvis/export-save
+        - file: chapters/giwaxs/gidvis/integration
         - file: chapters/giwaxs/gidvis/troubleshooting
       - file: chapters/giwaxs/extra/references
   - caption: GISAXS (to be done)

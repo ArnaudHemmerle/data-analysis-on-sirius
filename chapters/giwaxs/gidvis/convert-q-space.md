@@ -1,4 +1,4 @@
-# Convert to q Space
+# Convert to q space
 
 Select the file `5151` from the file list. This file was acquired at an angle of ${\rm gamma} = -0.75$ degrees. Choose the correct `Beamtime` (e.g., `Tutorial.mat`) and the corresponding `Experimental Setup` (e.g., `gamma -0.75`).
 
