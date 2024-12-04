@@ -32,6 +32,7 @@ parts:
         - file: chapters/giwaxs/gidvis/calibration
         - file: chapters/giwaxs/gidvis/powder-plot
         - file: chapters/giwaxs/gidvis/integration
+        - file: chapters/giwaxs/gidvis/indexation
         - file: chapters/giwaxs/gidvis/export-save
         - file: chapters/giwaxs/gidvis/troubleshooting
       - file: chapters/giwaxs/extra/references

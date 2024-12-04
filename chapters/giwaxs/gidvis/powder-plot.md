@@ -1,10 +1,27 @@
 # Powder plot
 
-You can easily get a powder plot, that is the intensity as a function as the q vector (with $q=\sqrt{q_{xy}^2+q_z^2}$), that can be then compared to powder diffractogramm obtained elsewhere.
+A powder plot represents the intensity as a function of the q vector, defined as $q=\sqrt{q_{xy}^2+q_z^2}$. This allows for comparison with powder diffractograms obtained from other sources.
 
-Select the image, here the merged image of 5151 and 5152, and click on the icon `Line` (LineScan over whole image). This opens a new window `Powder Plot`. You can choose the binning of the plot by tunning the `number of x-axis data points`, for comparison between different plots leave it as it is. You can choose whether you want to get the value as a function of $q$ or $2\times\theta$ obtained with the wavelength of the x-ray emission line Cu Ka1, that is useful for comparison with powder diffractogramm. Select the data points with $q_z>0$ and $q_{xy}<0$, to avoid loosing resolution in $q_{xy}$, or peak splitting if the direct beam is not perfectly centered at $q_{xy}=0$.
+## Generate the powder plot
+
+1. **Select the Image**: Choose the merged image of scans 5151 and 5152.
+2. **Open LineScan**: Click on the `LINE` icon (LineScan over whole image). This opens the `Powder Plot` window.
+
+## Configure the plot
+
+- **Binning**: Adjust the binning by changing the `number of x-axis data points`. For consistency across comparisons, it’s recommended to leave this setting unchanged.
+- **Units**: Choose to display the data as a function of either $q$ or $2\theta$. Selecting $2\theta$ is particularly useful when comparing with powder diffractograms obtained using the Cu K$\rm \alpha$1 X-ray emission line.
+- **Data Selection**: Focus on data points with $q_z > 0$ and $q_{xy} < 0$ to:
+  - Maintain resolution in $q_{xy}$.
+  - Prevent peak splitting if the direct beam isn’t perfectly centered at $q_{xy} = 0$.
 
 ![](images/powder-plot-config.png)
 
-You can fit the peak positions using GIDVis tools, but it may be easier to export the data and use your own fitting software. Click on `File>Export Line Data...`, and then on `Export and Close`. The text file contains the powder plot as a two column file.
+## Analyze or export the plot
 
+- **Fitting**: GIDVis provides tools to fit the peak positions. However, you may find it easier to export the data and analyze it using your preferred fitting software.
+- **Export Data**:
+  1. Click on `File > Export Line Data...`.
+  2. Select `Export and Close`.
+
+The exported text file contains the powder plot data in a two-column format, suitable for further analysis.
