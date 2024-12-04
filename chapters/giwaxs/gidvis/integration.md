@@ -137,7 +137,7 @@ $$\alpha_f = \tan^{-1}\left(\frac{\rm{pixel\_size} \cdot (\rm{pos\_direct\_y} - 
 
 and $\rm{pos\_direct\_y}$ is the position of the direct beam on the rotated detector, calculated as:
 
-$$\rm{pos\_direct\_y} = \rm{PONI}_y - \frac{D}{\rm{pixel\_size}} \cdot \tan(\gamma),$$
+$$\rm{pos\_direct\_y} = \rm{PONI}_y + \frac{D}{\rm{pixel\_size}} \cdot \tan(\gamma),$$
 
 where $\gamma$ is the out-of-plane angle of the detector, and $D$ is the distance between the detector and the sample.
 
