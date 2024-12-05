@@ -1,4 +1,4 @@
-# Save the project & export the image
+# Save the project & export images
 
 ## Save Project
 You can save your project by clicking on `File>Save Project`. In the window `Save Project`, click on the beamtime to include in your save (here only `Tutorial.mat`). You can add extra files to the archive that will be created, if needed. For example, you can include the images you have exported or the merged images you have created.
@@ -17,8 +17,3 @@ Then on `File>Save Image` you have extra parameters for the image display. Click
 
 Unfortunately, GIDVis does not offer a proper way to export the image as a raw 2D matrix that could be imported in another software.
 
-
-If you've missed any steps of this tutorial, you can download the file corresponding to the current tutorial
-
-
-[comment]: [OTHER](../../../_static/giwaxs/gidvis/tutorial.GIDzip).

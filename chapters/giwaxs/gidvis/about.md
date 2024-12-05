@@ -6,7 +6,7 @@ GIDVis is a MATLAB program designed to analyze grazing incidence diffraction ima
 
 ## Why use GIDVis?
 
-There are not many software tools available for processing GIWAXS (Grazing Incidence Wide-Angle X-ray Scattering) data. GIDVis stands out by offering a user-friendly GUI, which is particularly convenient for non-experts in the field. This tutorial is designed to guide SIRIUS users in effectively using GIDVis to convert detector images into reciprocal space and analyze the positions of diffraction peaks.
+There are not many software tools available for processing GIWAXS (Grazing Incidence Wide-Angle X-ray Scattering) data. GIDVis stands out by offering a user-friendly GUI, which is particularly convenient for non-experts in the field. This tutorial is designed to guide SIRIUS users in effectively using GIDVis to convert detector images into reciprocal space and analyze the positions of diffraction peaks. Note that out-of-plane integration of the GIWAXS data is not easy with GIDVis, and requires some extra data treatment, for example using Python.
 
 ## Please cite GIDVis!
 
