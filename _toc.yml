@@ -39,9 +39,15 @@ parts:
   - caption: GISAXS (to be done)
     chapters:
       - file: chapters/gisaxs/bornagain/about
-  - caption: XRF (to be done)
+  - caption: XRF (in progress)
     chapters:
       - file: chapters/xrf/pymca/about
+        sections:
+        - file: chapters/xrf/pymca/import-data
+        - file: chapters/xrf/pymca/calibration
+        - file: chapters/xrf/pymca/fit-parameters
+        - file: chapters/xrf/pymca/four-elements-sdd
+      - file: chapters/xrf/extra/references
   - caption: GIXD (to be done)
     chapters:
       - file: chapters/gixd/jupygixd/about

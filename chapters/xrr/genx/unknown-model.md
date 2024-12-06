@@ -63,6 +63,9 @@ Compare these results with those obtained in the [previous section](content:buil
 
 It is crucial to remember that, in extreme cases, two very different models can provide a perfect fit to the same data. This highlights the importance of complementing XRR with other techniques to identify the best model accurately.
 
+If you've missed any steps, you can download the updated file [here](../../../_static/xrr/genx/unknown_two_layers_fit_done.hgx).
+
+
 
 
 
