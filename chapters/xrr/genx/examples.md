@@ -1,7 +1,7 @@
-(genx-examples)=
+(content:genx-examples)=
 # Other Examples
 
-## Trilayer on a Solid Substrate
+## Trilayer on a solid substrate
 
 Here is an example to show that complex systems can be fitted as well. It is a trilayer of the phospholipid DSPC deposited on a Si substrate using the Langmuir-Blodgett method. After some work, particularly in finding an initial guess—which requires experience and a review of the literature—it is possible to achieve a good fit.
 

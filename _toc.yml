@@ -20,7 +20,7 @@ parts:
         - file: chapters/xrr/genx/troubleshooting
       - file: chapters/xrr/refnx/about
       - file: chapters/xrr/extra/references
-  - caption: GIWAXS (in progress)
+  - caption: GIWAXS
     chapters:
       - file: chapters/giwaxs/gidvis/about
         sections:

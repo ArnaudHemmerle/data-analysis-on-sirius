@@ -1,3 +1,4 @@
+(content:build-model)=
 # Build a more complex model
 
 Now we will proceed with a more complex system than a simple liquid-gas interface. We will build the model step-by-step and estimate the initial guesses for the various parameters.
@@ -123,11 +124,14 @@ For now, keep the density values unchanged.
 
 ![](images/build-model-adjust-range.png)
 
+(content:build-model:fit)=
 ## Start the fit
 
 Start the fit by clicking the Arrow icon in the top bar. After some time, you'll notice that the parameters stop evolving. Click the Stop icon and keep the fit results. Simulate the results once to confirm that the current set of parameters corresponds to the best-fit values. You should now see that the model matches the data perfectly.
 
 ![](images/build-model-best-fit.png)
+
+![](images/build-model-best-fit-sld.png)
 
 **Be careful**, this does not necessarily mean that you have solved the structure of your sample. You have found one set of parameters that fit the data, but there is no guarantee that another set of parameters would not fit the curve equally well (an inherent limitation of XRR).
 
