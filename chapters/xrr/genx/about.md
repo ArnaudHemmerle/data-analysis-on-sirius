@@ -13,9 +13,3 @@ Like any fitting software, GenX requires several parameters to be configured and
 ## Please cite GenX!
 
 The SIRIUS beamline is not involved in the development of GenX; we are simply users, just like you. However, it is evident that a significant amount of time and effort went into creating such a powerful tool. If you use GenX to analyze your data, please cite the following paper: {cite:p}`glavic2022`.
-
-## Troubleshooting
-
-This tutorial was written using GenX version 3.7.4 on macOS. There may be differences in behavior with other versions or operating systems.
-
-A known issue is that GenX may freeze during startup. To resolve this, try disabling your internet connection when launching GenX and re-enabling it afterward. Additionally, the software may crash occasionally, so it is highly recommended to save your work frequently.

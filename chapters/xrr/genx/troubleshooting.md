@@ -10,7 +10,3 @@ A known issue is that GenX may freeze during startup. To resolve this, try disab
 
 It is common to forget to convert the q data from the SIRIUS beamline, in ${\rm nm}^{-1}$, to the units used by GenX, in ${\rm A}^{-1}$. Refer to this [section](genx-correct-q) to learn how to make the conversion.
 
-
-
-
-
