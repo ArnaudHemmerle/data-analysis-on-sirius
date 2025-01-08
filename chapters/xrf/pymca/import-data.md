@@ -45,4 +45,4 @@ To convert the x-axis to approximate energies:
 
 ## Specific case of the 4-elements detector
 
-Following the same procedure but using data from the 4-elements detector, you will see four datasets, each corresponding to one element. You can compare them and select the dataset you wish to analyze. Unfortunately, there is no native option to average the spectra from the different elements to improve the statistics.
+Following the same procedure but using data from the 4-elements detector, you will see four datasets, each corresponding to one element. You can compare them and select the dataset you wish to analyze. Unfortunately, there is no native option to average or sum the spectra from the different elements to improve the statistics at this stage. However, this is possible with the batch fitting module described later.
