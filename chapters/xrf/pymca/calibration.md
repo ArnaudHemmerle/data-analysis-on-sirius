@@ -1,6 +1,8 @@
-# Energy calibration
+# Optional: energy calibration
 
-The first step in analyzing XRF data is to calibrate the relationship between the detector channels and energy (in keV). PyMca provides a second-order calibration formula:
+Analyzing XRF data requires calibrating the relationship between detector channels and energy (in keV). In the fitting procedure described in this tutorial, the calibration parameters are treated as free fitting parameters. However, in some cases, it may be necessary to perform the calibration beforehand and not leave it as free parameters during the fitting process.
+
+PyMca provides a second-order calibration formula:
 
 $$E{\rm[keV]} = A + B \times {\rm channel} + C \times {\rm channel}^2.$$
 

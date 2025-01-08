@@ -16,6 +16,3 @@ Like any specialized software for X-ray data treatment, PyMca requires proper co
 
 The SIRIUS beamline is not involved in the development of PyMca; we are simply users, just like you. However, it is evident that a significant amount of time and effort went into creating such a powerful tool. If you use PyMca to analyze your data, please cite the following paper: {cite:p}`sole2007`.
 
-## Version used
-
-This tutorial was written using PyMca version 5.9.2 on macOS. There may be differences in behavior with other versions or operating systems.
