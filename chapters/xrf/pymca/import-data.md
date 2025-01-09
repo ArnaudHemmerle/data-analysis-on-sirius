@@ -8,8 +8,8 @@ The file is in Nexus format (HDF5), which contains 31 individual XRF spectra acq
 
 ## Open the file
 
-1. Navigate to `File > Open > Data Source`.
-2. Select the `.nxs` file and ensure that the file type is set to `HDF5 Files`.
+1. Go to `File > Open > Data Source`.
+2. Ensure that the file type is set to `HDF5 Files` and select the `.nxs` file.
 
 ![](images/import-data-new-data.png)
 
@@ -17,8 +17,8 @@ The file is in Nexus format (HDF5), which contains 31 individual XRF spectra acq
 
 After opening the file:
 
-1. Ensure that the `HDF5` tab is active.
-2. Click on the first item in the list named `root_spyc_DiffractoScanConfig`.
+1. Check that the `HDF5` tab is active.
+2. Click on the first item in the list; named `root_spyc_DiffractoScanConfig`.
 3. Go to the `MCA` tab.
 4. Select the averaged spectrum and tick the box to choose the dataset.
 

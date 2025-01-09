@@ -24,9 +24,9 @@ A window will open, notifying you that no peaks are selected. Click on `OK`. Ver
 
 ## Import a configuration file
 
-Several parameters need to be set before fitting the data. It is strongly recommended to start with a pre-defined configuration file, such as the one corresponding to the scan in this tutorial, available [here](../../../_static/xrf/pymca/config_xrf_1elem_start.cfg).
+Several parameters need to be set before fitting the data. It is strongly recommended to start with a pre-defined configuration file, such as the one corresponding to the scan in this tutorial, available [here](../../../_static/xrf/pymca/config_xrf_1elem_start.cfg) (right-click, then `Save the link as`).
 
-To load the configuration file, click on `Configure`, then `Load`, and import the appropriate file. Next, review the parameters that need to be adapted for the present experiment.
+To load the configuration file in PyMca, click on `Configure`, then `Load`, and import the appropriate file. Next, review the parameters that need to be adapted for the present experiment, following this guide.
 
 ## Setup the fit region
 
@@ -34,7 +34,7 @@ In the `MCA Fit Parameters` window, which you can access by clicking on `Configu
 
 ![](images/fit-data-first-limits.png)
 
-Click `OK`. Back in the display window, you can click on `E` to switch from channels to energy and on `Log` to display a logarithmic y-scale. If part of the curve is missing along the y-axis, click on the auto-scale button (the second button) to adjust the y-axis. The same applies to the x-axis.
+Click `OK`. Back in the display window, you can click on `E` to switch from channels to energy and on `Log` to display a logarithmic y-scale. If part of the curve is missing along the y-axis, click twice on the auto-scale button (the second button) to adjust the y-axis. The same applies to the x-axis.
 
 ![](images/fit-data-log.png)
 
@@ -55,14 +55,14 @@ In the `MCA Fit Parameters` window, click on the `BEAM` tab and set the incident
 In the `MCA Fit Parameters` window, go to the `ATTENUATORS` tab. The media traversed by the emitted X-ray fluorescence must be accurately described to account for energy-dependent attenuation. For most experiments performed with the Langmuir trough, the XRF detector is positioned above the layer in a backscattering geometry. In this configuration, the fluorescence passes through the following media:
 1. A layer of helium, which has negligible attenuation and is not accounted for here.
 2. A Kapton window, 25 microns thick.
-3. A layer of air, typically 4 cm. Note: in this tutorial's experiment, the detector was positioned as close as possible to the Kapton window, leaving only 5 mm of air.
+3. A layer of air, typically 4 cm. Note: in this tutorial's experiment, the detector was positioned as close as possible to the Kapton window, leaving only 5 mm of air. Adapt to your experimental configuration.
 4. A Beryllium window in the detector, approximately 8 microns thick.
 
 ![](images/fit-data-attenuators.png)
 
 ## Attribute the peaks to correct elements
 
-Next, identify the different elements present in your sample. To do this, close the `MCA Fit Parameters` window and click on a peak in the spectrum. This action should open the `Peak Identifier` tool, which helps you determine the element associated with each peak. For example, clicking on the first peak might indicate that it corresponds to Phosphorus. Repeat this process for each peak, and write down the list of elements present in your sample.
+Next, identify the different elements present in your sample. To do this, close the `MCA Fit Parameters` window by clicking on `OK`, and click on a peak in the spectrum. This action should open the `Peak Identifier` tool, which helps you determine the element associated with each peak. For example, clicking on the first peak might indicate that it corresponds to Phosphorus. Repeat this process for each peak, and write down the list of elements present in your sample.
 
 Note that Argon (Ar) is commonly detected due to the residual air in the trough and in front of the detector. It is also common to observe elements such as Nickel (Ni), Copper (Cu), Titanium (Ti), and Iron (Fe) due to metallic parts of the beamline illuminated by the X-ray beam.
 
@@ -94,4 +94,4 @@ Navigate to the `TABLE` tab to view the area associated with each element and it
 
 For a more detailed summary of the fit, click on the `HTML Report` button to generate a comprehensive report.
 
-If you’ve missed any steps, you can download the configuration file filled with the appropriate values [here](../../../_static/xrf/pymca/config_xrf_1elem_finish.cfg).
+If you’ve missed any steps, you can download the configuration file filled with the appropriate values [here](../../../_static/xrf/pymca/config_xrf_1elem_finish.cfg) (right-click, then `Save the link as`).
