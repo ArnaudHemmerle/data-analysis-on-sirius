@@ -62,7 +62,7 @@ In the `MCA Fit Parameters` window, go to the `ATTENUATORS` tab. The media trave
 
 ## Attribute the peaks to correct elements
 
-Next, identify the different elements present in your sample. To do this, close the `MCA Fit Parameters` window by clicking on `OK`, and click on a peak in the spectrum. This action should open the `Peak Identifier` tool, which helps you determine the element associated with each peak. For example, clicking on the first peak might indicate that it corresponds to Phosphorus. Repeat this process for each peak, and write down the list of elements present in your sample.
+Next, identify the different elements present in your sample. To do this, close the `MCA Fit Parameters` window by clicking on `OK`, and click on `Tools/Identify Peaks` in the `McaAdvancedFit`window. This will open the `Peak Identifier` tool, which helps you determine the element associated with each peak. For example, clicking on the first peak on the curve might indicate that it corresponds to Phosphorus. Repeat this process for each peak, and write down the list of elements present in your sample.
 
 Note that Argon (Ar) is commonly detected due to the residual air in the trough and in front of the detector. It is also common to observe elements such as Nickel (Ni), Copper (Cu), Titanium (Ti), and Iron (Fe) due to metallic parts of the beamline illuminated by the X-ray beam.
 
