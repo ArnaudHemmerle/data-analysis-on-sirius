@@ -24,7 +24,7 @@ After opening the file:
 
 ![](images/import-data-display.png)
 
-You should now see the average of the 31 XRF spectra acquired during the scan in the right window. The data are displayed as the intensity of each detector channel. You can explore the curve by zooming in on certain regions, changing the y-scale to log, etc. If you have multiple files open, you can also use the `ADD/REMOVE/REPLACE` buttons to compare spectra. Be sure to replace the previous spectrum with the one you want to study by clicking on the button `REPLACE.
+You should now see the average of the 31 XRF spectra acquired during the scan in the right window. The data are displayed as the intensity of each detector channel. You can explore the curve by zooming in on certain regions, changing the y-scale to log, etc. If you have multiple files open, you can also use the `ADD/REMOVE/REPLACE` buttons to compare spectra. Be sure to replace the previous spectrum with the one you want to study by clicking on the button `REPLACE`.
 
 If you work with data evolving with time (for example, following a kinetics), you can select a specific index instead of averaging over the whole scan.
 
