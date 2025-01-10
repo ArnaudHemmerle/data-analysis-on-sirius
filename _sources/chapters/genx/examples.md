@@ -1,2 +1,0 @@
-(genx-examples)=
-# Examples

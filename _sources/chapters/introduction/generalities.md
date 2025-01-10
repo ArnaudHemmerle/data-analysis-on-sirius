@@ -1,1 +1,0 @@
-# Generalities on XRR

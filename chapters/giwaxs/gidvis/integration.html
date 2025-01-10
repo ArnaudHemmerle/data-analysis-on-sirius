@@ -1,0 +1,876 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>In-plane and out-of-plane integration &#8212; X-Ray Reflectivity on SIRIUS</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/giwaxs/gidvis/integration';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Indexation" href="indexation.html" />
+    <link rel="prev" title="Powder plot" href="powder-plot.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../home.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/resized-logo-SIRIUS.jpg" class="logo__image only-light" alt="X-Ray Reflectivity on SIRIUS - Home"/>
+    <img src="../../../_static/resized-logo-SIRIUS.jpg" class="logo__image only-dark pst-js-only" alt="X-Ray Reflectivity on SIRIUS - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">XRR</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../xrr/genx/about.html">Analyzing XRR with GenX</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../xrr/genx/getting-started.html">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../xrr/genx/import-data.html">Import data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../xrr/genx/beam-parameters.html">Beam parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../xrr/genx/sample-parameters.html">Sample parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../xrr/genx/fit.html">Fit the data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../xrr/genx/export.html">Export</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../xrr/genx/build-model.html">Build a more complex model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../xrr/genx/unknown-model.html">Unknown model: where to start?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../xrr/genx/examples.html">Other examples &amp; tutorial data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../xrr/genx/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../xrr/extra/references.html">References</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">GIWAXS</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="about.html">Analyzing GIWAXS with GIDVis</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="import-data.html">Import data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beam-parameters.html">Beam parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="convert-q-space.html">Convert to q space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="merge.html">Merge images to remove dead zones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="calibration.html">Calibration with a reference sample (optional)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="powder-plot.html">Powder plot</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">In-plane and out-of-plane integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="indexation.html">Indexation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="export-save.html">Save the project &amp; export images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">Troubleshooting &amp; tutorial data</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../extra/references.html">References</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">XRF</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../xrf/pymca/about.html">Analyzing XRF with PyMca</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../xrf/pymca/import-data.html">Import &amp; visualize data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../xrf/pymca/fit-data.html">Fit the spectrum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../xrf/pymca/kinetics.html">Batch fitting for kinetics analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../xrf/pymca/calibration.html">Optional: energy calibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../xrf/pymca/troubleshooting.html">Troubleshooting &amp; tutorial data</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../xrf/extra/references.html">References</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../appendices/bibliography.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/ArnaudHemmerle/xrr_on_sirius" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ArnaudHemmerle/xrr_on_sirius/issues/new?title=Issue%20on%20page%20%2Fchapters/giwaxs/gidvis/integration.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/chapters/giwaxs/gidvis/integration.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>In-plane and out-of-plane integration</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#warning-out-of-plane-integration-is-often-not-rigorous">Warning: out-of-plane integration is often not rigorous</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integration-directly-in-q-space">Integration directly in q-space</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-plane">In-plane</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#out-of-plane">Out-of-plane</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-plane-and-out-of-plane-integrations-from-pixel-space">In-plane and out-of-plane integrations from pixel-space</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">In-plane</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Out-of-plane</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conversion-to-q-space">Conversion to q-space</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#q-xy"><strong><span class="math notranslate nohighlight">\(q_{xy}\)</span></strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#q-z"><strong><span class="math notranslate nohighlight">\(q_{z}\)</span></strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-of-conversion-using-python">Example of conversion using Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-and-comparing-the-results">Plotting and comparing the results</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#in-plane-profiles-directly-from-q-space-and-after-pixel-space-conversion">In-plane profiles: directly from q-space and after pixel-space conversion</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#out-of-plane-profiles-from-pixel-space-conversion">Out-of-plane profiles from pixel-space conversion</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-in-plane-and-out-of-plane-profiles">Comparison in-plane and out-of-plane profiles</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="in-plane-and-out-of-plane-integration">
+<h1>In-plane and out-of-plane integration<a class="headerlink" href="#in-plane-and-out-of-plane-integration" title="Link to this heading">#</a></h1>
+<section id="warning-out-of-plane-integration-is-often-not-rigorous">
+<h2>Warning: out-of-plane integration is often not rigorous<a class="headerlink" href="#warning-out-of-plane-integration-is-often-not-rigorous" title="Link to this heading">#</a></h2>
+<p>With a single angle of incidence, it is impossible to fully cover the range of <span class="math notranslate nohighlight">\(q_z\)</span> at <span class="math notranslate nohighlight">\(q_{xy}=0\)</span> due to the limitations of measuring the Ewald sphere with a planar 2D detector <span id="id1">[<a class="reference internal" href="../../appendices/bibliography.html#id41" title="Julian A. Steele, Eduardo Solano, David Hardy, Damara Dayton, Dylan Ladd, Keith White, Peng Chen, Jingwei Hou, Haowei Huang, Rafikul Ali Saha, Lianzhou Wang, Feng Gao, Johan Hofkens, Maarten B. J. Roeffaers, Dmitry Chernyshov, and Michael F. Toney. How to GIWAXS: Grazing Incidence Wide Angle X-Ray Scattering Applied to Metal Halide Perovskite Thin Films. Advanced Energy Materials, 13(27):2300760, 2023. doi:10.1002/aenm.202300760.">17</a>]</span>.</p>
+<p><img alt="" src="../../../_images/integration-missing-wedge.png" /></p>
+<p>To rigorously obtain the out-of-plane region of reciprocal space at <span class="math notranslate nohighlight">\(q_{xy}=0\)</span>, techniques such as X-ray reflectivity should be used.</p>
+<p>An approximation often made is to ignore the corrections required by the Ewald sphere. In this case, note that comparisons between in-plane and out-of-plane integrations are mostly qualitative, particularly at high <span class="math notranslate nohighlight">\(q_z\)</span> values.</p>
+<p>We will see different approaches here to obtain in-plane and out-of-plane integrations.</p>
+</section>
+<section id="integration-directly-in-q-space">
+<h2>Integration directly in q-space<a class="headerlink" href="#integration-directly-in-q-space" title="Link to this heading">#</a></h2>
+<section id="in-plane">
+<h3>In-plane<a class="headerlink" href="#in-plane" title="Link to this heading">#</a></h3>
+<p>Performing in-plane integration directly in q-space is possible, since there is only little corrections related to the Ewald sphere.</p>
+<ol class="arabic simple">
+<li><p><strong>Initiate Integration</strong>: Click on the <code class="docutils literal notranslate"><span class="pre">ILS</span></code> (Integrated Line Scan) icon.</p></li>
+<li><p><strong>Draw the Integration Area</strong>: Draw a rectangle to define the integration region. Typically, this rectangle is positioned just above the Yoneda-Vineyard peak, near the critical angle of total external reflection.</p>
+<ul class="simple">
+<li><p>To adjust precisely, right-click the rectangle and select <code class="docutils literal notranslate"><span class="pre">Set</span> <span class="pre">position</span></code>.</p></li>
+<li><p>Keep the rectangle’s height consistent across samples for comparative purposes.</p></li>
+<li><p>Ideally, report the integration domain in publications.</p></li>
+</ul>
+</li>
+</ol>
+<p><img alt="" src="../../../_images/integration-qxy-rectangle.png" /></p>
+<ol class="arabic simple" start="3">
+<li><p><strong>Update Data</strong>: In the <code class="docutils literal notranslate"><span class="pre">Integrated</span> <span class="pre">Line</span> <span class="pre">Scan</span></code> window, click on <code class="docutils literal notranslate"><span class="pre">Update</span> <span class="pre">Data</span></code> to process the selected rectangle.</p></li>
+</ol>
+<p><img alt="" src="../../../_images/integration-qxy-direct-result.png" /></p>
+<ol class="arabic simple" start="4">
+<li><p><strong>Export Data</strong>: If needed, fit the peak positions using GIDVis or export the data for external analysis.</p>
+<ul class="simple">
+<li><p>Go to <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">Export</span> <span class="pre">Line</span> <span class="pre">Data...</span></code>.</p></li>
+<li><p>Select only <code class="docutils literal notranslate"><span class="pre">Sum</span> <span class="pre">vertically</span></code>, then click on <code class="docutils literal notranslate"><span class="pre">Export</span> <span class="pre">and</span> <span class="pre">Close</span></code>.</p></li>
+</ul>
+</li>
+</ol>
+<p>The exported text file contains intensity as a function of <span class="math notranslate nohighlight">\(q_{xy}\)</span> in a two-column format. For this tutorial, the file was saved as <code class="docutils literal notranslate"><span class="pre">5151-5152-direct-integration-qxy.txt</span></code>.</p>
+</section>
+<section id="out-of-plane">
+<h3>Out-of-plane<a class="headerlink" href="#out-of-plane" title="Link to this heading">#</a></h3>
+<p>Due to the missing wedge, the out-of-plane integration directly in q-space is limited to small <span class="math notranslate nohighlight">\(q_z\)</span> only. In our example, that would be up to <span class="math notranslate nohighlight">\(\sim 6\)</span> <span class="math notranslate nohighlight">\(\rm{nm}^{-1}\)</span>.</p>
+<ol class="arabic simple">
+<li><p><strong>Initiate Integration</strong>: Click on the <code class="docutils literal notranslate"><span class="pre">ILS</span></code> (Integrated Line Scan) icon.</p></li>
+<li><p><strong>Draw the Integration Area</strong>: Draw a rectangle to define the integration region. Typically, this rectangle is centered on the beamstop.</p>
+<ul class="simple">
+<li><p>To adjust precisely, right-click the rectangle and select <code class="docutils literal notranslate"><span class="pre">Set</span> <span class="pre">position</span></code>.</p></li>
+<li><p>Keep the rectangle’s height consistent across samples for comparative purposes.</p></li>
+<li><p>Ideally, report the integration domain in publications.</p></li>
+</ul>
+</li>
+</ol>
+<p><img alt="" src="../../../_images/integration-qz-rectangle.png" /></p>
+<ol class="arabic simple" start="3">
+<li><p><strong>Update Data</strong>: In the <code class="docutils literal notranslate"><span class="pre">Integrated</span> <span class="pre">Line</span> <span class="pre">Scan</span></code> window, click on <code class="docutils literal notranslate"><span class="pre">Update</span> <span class="pre">Data</span></code> to process the selected rectangle.</p></li>
+</ol>
+<p><img alt="" src="../../../_images/integration-qz-direct-result.png" /></p>
+<ol class="arabic simple" start="4">
+<li><p><strong>Export Data</strong>: If needed, fit the peak positions using GIDVis or export the data for external analysis.</p>
+<ul class="simple">
+<li><p>Go to <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">Export</span> <span class="pre">Line</span> <span class="pre">Data...</span></code>.</p></li>
+<li><p>Select only <code class="docutils literal notranslate"><span class="pre">Sum</span> <span class="pre">horizontally</span></code>, then click on <code class="docutils literal notranslate"><span class="pre">Export</span> <span class="pre">and</span> <span class="pre">Close</span></code>.</p></li>
+</ul>
+</li>
+</ol>
+<p>The exported text file contains intensity as a function of <span class="math notranslate nohighlight">\(q_{z}\)</span> in a two-column format. For this tutorial, the file was saved as <code class="docutils literal notranslate"><span class="pre">5151-5152-direct-integration-qz.txt</span></code>.</p>
+</section>
+</section>
+<section id="in-plane-and-out-of-plane-integrations-from-pixel-space">
+<h2>In-plane and out-of-plane integrations from pixel-space<a class="headerlink" href="#in-plane-and-out-of-plane-integrations-from-pixel-space" title="Link to this heading">#</a></h2>
+<p>As noted earlier, out-of-plane integrations are commonly performed without Ewald sphere corrections. However, this approximation should be explicitly mentioned in your publication <span id="id2">[<a class="reference internal" href="../../appendices/bibliography.html#id41" title="Julian A. Steele, Eduardo Solano, David Hardy, Damara Dayton, Dylan Ladd, Keith White, Peng Chen, Jingwei Hou, Haowei Huang, Rafikul Ali Saha, Lianzhou Wang, Feng Gao, Johan Hofkens, Maarten B. J. Roeffaers, Dmitry Chernyshov, and Michael F. Toney. How to GIWAXS: Grazing Incidence Wide Angle X-Ray Scattering Applied to Metal Halide Perovskite Thin Films. Advanced Energy Materials, 13(27):2300760, 2023. doi:10.1002/aenm.202300760.">17</a>]</span>.</p>
+<ol class="arabic simple">
+<li><p><strong>Select the TIFF File</strong>: Use the original TIFF file, not the merged image (e.g., <code class="docutils literal notranslate"><span class="pre">SIRIUS_2024_11_22_5151_pilatus_sum.tiff</span></code>).</p></li>
+<li><p><strong>Plot in Pixel Space</strong>: Display the image in pixel space. If the plot appears empty, click on <code class="docutils literal notranslate"><span class="pre">Full</span></code> in the <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code> window.</p></li>
+<li><p><strong>Perform Integrations</strong>: Follow the same steps as above for in-plane or out-of-plane integrations.</p></li>
+</ol>
+<section id="id3">
+<h3>In-plane<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>In-plane integration can be done directly in q-space, but, as this is a tutorial, we will see how to recover it from pixel space as well.</p>
+<ol class="arabic simple">
+<li><p><strong>Initiate Integration</strong>: Click on the <code class="docutils literal notranslate"><span class="pre">ILS</span></code> (Integrated Line Scan) icon.</p></li>
+<li><p><strong>Draw the Integration Area</strong>: Draw a rectangle to define the integration region. Typically, this rectangle is positioned just above the Yoneda-Vineyard peak, near the critical angle of total external reflection.</p>
+<ul class="simple">
+<li><p>To adjust precisely, right-click the rectangle and select <code class="docutils literal notranslate"><span class="pre">Set</span> <span class="pre">position</span></code>.</p></li>
+<li><p>Keep the rectangle’s height consistent across samples for comparative purposes.</p></li>
+<li><p>Ideally, report the integration domain in publications.</p></li>
+</ul>
+</li>
+</ol>
+<p><img alt="" src="../../../_images/integration-pixel-horizontal-rectangle.png" /></p>
+<ol class="arabic simple" start="3">
+<li><p><strong>Update Data</strong>: In the <code class="docutils literal notranslate"><span class="pre">Integrated</span> <span class="pre">Line</span> <span class="pre">Scan</span></code> window, click on <code class="docutils literal notranslate"><span class="pre">Update</span> <span class="pre">Data</span></code> to process the selected rectangle.</p></li>
+</ol>
+<p><img alt="" src="../../../_images/integration-pixel-horizontal-result.png" /></p>
+<ol class="arabic simple" start="4">
+<li><p><strong>Export Data</strong>: If needed, fit the peak positions using GIDVis or export the data for external analysis.</p>
+<ul class="simple">
+<li><p>Go to <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">Export</span> <span class="pre">Line</span> <span class="pre">Data...</span></code>.</p></li>
+<li><p>Select only <code class="docutils literal notranslate"><span class="pre">Sum</span> <span class="pre">vertically</span></code>, then click on <code class="docutils literal notranslate"><span class="pre">Export</span> <span class="pre">and</span> <span class="pre">Close</span></code>.</p></li>
+</ul>
+</li>
+</ol>
+<p>The exported text file contains intensity as a function of the horizontal pixel number in a two-column format. For this tutorial, the file was saved as <code class="docutils literal notranslate"><span class="pre">5151-pixel-integration-horizontal.txt</span></code>.</p>
+</section>
+<section id="id4">
+<h3>Out-of-plane<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Initiate Integration</strong>: Click on the <code class="docutils literal notranslate"><span class="pre">ILS</span></code> (Integrated Line Scan) icon.</p></li>
+<li><p><strong>Draw the Integration Area</strong>: Draw a rectangle to define the integration region. Typically, this rectangle is centered on the beamstop.</p>
+<ul class="simple">
+<li><p>To adjust precisely, right-click the rectangle and select <code class="docutils literal notranslate"><span class="pre">Set</span> <span class="pre">position</span></code>.</p></li>
+<li><p>Keep the rectangle’s width consistent across samples for comparative purposes.</p></li>
+<li><p>Ideally, report the integration domain in publications.</p></li>
+</ul>
+</li>
+</ol>
+<p><img alt="" src="../../../_images/integration-pixel-vertical-rectangle.png" /></p>
+<ol class="arabic simple" start="3">
+<li><p><strong>Update Data</strong>: In the <code class="docutils literal notranslate"><span class="pre">Integrated</span> <span class="pre">Line</span> <span class="pre">Scan</span></code> window, click on <code class="docutils literal notranslate"><span class="pre">Update</span> <span class="pre">Data</span></code> to process the selected rectangle.</p></li>
+</ol>
+<p><img alt="" src="../../../_images/integration-pixel-vertical-result.png" /></p>
+<ol class="arabic simple" start="4">
+<li><p><strong>Export Data</strong>: If needed, fit the peak positions using GIDVis or export the data for external analysis.</p>
+<ul class="simple">
+<li><p>Go to <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">Export</span> <span class="pre">Line</span> <span class="pre">Data...</span></code>.</p></li>
+<li><p>Select only <code class="docutils literal notranslate"><span class="pre">Sum</span> <span class="pre">horizontally</span></code>, then click on <code class="docutils literal notranslate"><span class="pre">Export</span> <span class="pre">and</span> <span class="pre">Close</span></code>.</p></li>
+</ul>
+</li>
+</ol>
+<p>The exported text file contains intensity as a function of the vertical pixel number in a two-column format. For this tutorial, the file was saved as <code class="docutils literal notranslate"><span class="pre">5151-pixel-integration-vertical.txt</span></code>.</p>
+<ol class="arabic simple" start="5">
+<li><p><strong>Deal with the dead zones</strong>: Notice that a peak is missing around pixel 830 due to a dead zone in the detector. The same procedure should then be repeated with the exact same rectangle for the other detector angle, in this case using the file <code class="docutils literal notranslate"><span class="pre">SIRIUS_2024_11_22_5152_pilatus_sum.tiff</span></code>.</p></li>
+</ol>
+<p>For this tutorial, the resulting file was saved as <code class="docutils literal notranslate"><span class="pre">5152-pixel-integration-vertical.txt</span></code>.</p>
+</section>
+<section id="conversion-to-q-space">
+<h3>Conversion to q-space<a class="headerlink" href="#conversion-to-q-space" title="Link to this heading">#</a></h3>
+<p>Now, you need to convert the pixel-space profiles to q-space using the following approximated formulas, not taking into account the corrections due to the Ewald sphere.</p>
+<section id="q-xy">
+<h4><strong><span class="math notranslate nohighlight">\(q_{xy}\)</span></strong><a class="headerlink" href="#q-xy" title="Link to this heading">#</a></h4>
+<div class="math notranslate nohighlight">
+\[q_{xy} = \frac{4\pi}{\lambda} \sin\left(\frac{2\theta}{2}\right),\]</div>
+<p>where, for each pixel with horizontal coordinate <span class="math notranslate nohighlight">\(x\)</span>, the angle <span class="math notranslate nohighlight">\(2\theta\)</span> is given by:</p>
+<div class="math notranslate nohighlight">
+\[2\theta = \tan^{-1}\left(\rm{pixel\_size} \cdot \frac{x - \rm{pos\_direct\_x}}{D}\right).\]</div>
+<p>Here, <span class="math notranslate nohighlight">\(\rm{pos\_direct\_x}\)</span> represents the position of the direct beam on the rotated detector, and is calculated as:</p>
+<div class="math notranslate nohighlight">
+\[\rm{pos\_direct\_x} = \rm{PONI}_x - \frac{D}{\rm{pixel\_size}} \cdot \tan(\delta),\]</div>
+<p>where <span class="math notranslate nohighlight">\(\delta\)</span> is the in-plane angle of the detector, and <span class="math notranslate nohighlight">\(D\)</span> is the distance between the detector and the sample.</p>
+</section>
+<section id="q-z">
+<h4><strong><span class="math notranslate nohighlight">\(q_{z}\)</span></strong><a class="headerlink" href="#q-z" title="Link to this heading">#</a></h4>
+<div class="math notranslate nohighlight">
+\[q_{z} = \frac{2\pi}{\lambda} \left(\sin(\alpha_f) + \sin(\alpha_i)\right),\]</div>
+<p>where <span class="math notranslate nohighlight">\(\alpha_f\)</span> is calculated for each pixel with vertical coordinate <span class="math notranslate nohighlight">\(y\)</span> using the formula:</p>
+<div class="math notranslate nohighlight">
+\[\alpha_f = \tan^{-1}\left(\frac{\rm{pixel\_size} \cdot (\rm{pos\_direct\_y} - y)}{D}\right) - \alpha_i,\]</div>
+<p>and <span class="math notranslate nohighlight">\(\rm{pos\_direct\_y}\)</span> is the position of the direct beam on the rotated detector, calculated as:</p>
+<div class="math notranslate nohighlight">
+\[\rm{pos\_direct\_y} = \rm{PONI}_y + \frac{D}{\rm{pixel\_size}} \cdot \tan(\gamma),\]</div>
+<p>where <span class="math notranslate nohighlight">\(\gamma\)</span> is the out-of-plane angle of the detector, and <span class="math notranslate nohighlight">\(D\)</span> is the distance between the detector and the sample.</p>
+</section>
+</section>
+<section id="example-of-conversion-using-python">
+<h3>Example of conversion using Python<a class="headerlink" href="#example-of-conversion-using-python" title="Link to this heading">#</a></h3>
+<p>Here is a step-by-step example of Python code to convert profiles from pixel space to q-space using the previously described formulae. The complete program can be found in the Jupyter Notebook <code class="docutils literal notranslate"><span class="pre">conversion-pixel-q-space.ipynb</span></code>, available <a class="reference download internal" download="" href="../../../_downloads/99f753c97f495c1c3de35d15f56068cd/results_gidvis.zip"><span class="xref download myst">here</span></a>.</p>
+<p>Below are the functions used to import and process the data:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="k">def</span> <span class="nf">calculate_qxy</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">lambda_</span><span class="p">,</span> <span class="n">pixel_size</span><span class="p">,</span> <span class="n">pos_direct_x</span><span class="p">,</span> <span class="n">D</span><span class="p">,</span> <span class="n">PONI_x</span><span class="p">,</span> <span class="n">delta</span><span class="p">):</span>
+    <span class="c1"># Calculate the position of the direct beam on the rotated detector</span>
+    <span class="n">pos_direct_x</span> <span class="o">=</span> <span class="n">PONI_x</span> <span class="o">-</span> <span class="p">(</span><span class="n">D</span> <span class="o">/</span> <span class="n">pixel_size</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">delta</span><span class="p">))</span>
+
+    <span class="c1"># Calculate the angle theta for each pixel with horizontal coordinate x</span>
+    <span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">(</span><span class="n">pixel_size</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">pos_direct_x</span><span class="p">)</span> <span class="o">/</span> <span class="n">D</span><span class="p">)</span><span class="o">/</span><span class="mf">2.</span>
+
+    <span class="c1"># Calculate q_xy</span>
+    <span class="n">qxy</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="n">lambda_</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">qxy</span>
+
+<span class="k">def</span> <span class="nf">calculate_qz</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">lambda_</span><span class="p">,</span> <span class="n">pixel_size</span><span class="p">,</span> <span class="n">pos_direct_y</span><span class="p">,</span> <span class="n">D</span><span class="p">,</span> <span class="n">PONI_y</span><span class="p">,</span> <span class="n">gamma</span><span class="p">,</span> <span class="n">alpha_i</span><span class="p">):</span>
+    <span class="c1"># Calculate the position of the direct beam on the rotated detector</span>
+    <span class="n">pos_direct_y</span> <span class="o">=</span> <span class="n">PONI_y</span> <span class="o">+</span> <span class="p">(</span><span class="n">D</span> <span class="o">/</span> <span class="n">pixel_size</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">gamma</span><span class="p">))</span>
+
+    <span class="c1"># Calculate the final angle alpha_f for each pixel with vertical coordinate y</span>
+    <span class="n">alpha_f</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">((</span><span class="n">pixel_size</span> <span class="o">*</span> <span class="p">(</span><span class="n">pos_direct_y</span> <span class="o">-</span> <span class="n">y</span><span class="p">))</span> <span class="o">/</span> <span class="n">D</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">alpha_i</span><span class="p">)</span>
+
+    <span class="c1"># Calculate q_z</span>
+    <span class="n">qz</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="n">lambda_</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">alpha_f</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">alpha_i</span><span class="p">)))</span>
+
+    <span class="k">return</span> <span class="n">qz</span>
+
+<span class="c1"># Function to load the data from a CSV file (one-line header, space-separated)</span>
+<span class="k">def</span> <span class="nf">load_data</span><span class="p">(</span><span class="n">file_path</span><span class="p">):</span>
+    <span class="c1"># Load the file with numpy, assuming it&#39;s space-separated and has a single-line header</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="c1"># The first column represents pixel values and the second column represents intensity values</span>
+    <span class="n">x_values</span> <span class="o">=</span> <span class="n">data</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>  <span class="c1"># Column 0 as pixel values</span>
+    <span class="n">intensity_values</span> <span class="o">=</span> <span class="n">data</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>  <span class="c1"># Column 1 as intensity values</span>
+
+    <span class="k">return</span> <span class="n">x_values</span><span class="p">,</span> <span class="n">intensity_values</span>
+
+<span class="c1"># Process data for q_xy or q_z</span>
+<span class="k">def</span> <span class="nf">process_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">lambda_</span><span class="p">,</span> <span class="n">pixel_size</span><span class="p">,</span> <span class="n">D</span><span class="p">,</span> <span class="n">PONI_x</span><span class="p">,</span> <span class="n">delta</span><span class="p">,</span> <span class="n">PONI_y</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">alpha_i</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="c1"># Load the data from the file</span>
+    <span class="n">pixel_values</span><span class="p">,</span> <span class="n">intensity_values</span> <span class="o">=</span> <span class="n">load_data</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">gamma</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># Calculate q_xy for each pixel value</span>
+        <span class="n">qxy_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">calculate_qxy</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">lambda_</span><span class="p">,</span> <span class="n">pixel_size</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">D</span><span class="p">,</span> <span class="n">PONI_x</span><span class="p">,</span> <span class="n">delta</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">pixel_values</span><span class="p">])</span>
+        <span class="c1"># Combine the results</span>
+        <span class="n">processed_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">((</span><span class="n">qxy_values</span><span class="p">,</span> <span class="n">intensity_values</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># Calculate q_z for each pixel value</span>
+        <span class="n">qz_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">calculate_qz</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">lambda_</span><span class="p">,</span> <span class="n">pixel_size</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">D</span><span class="p">,</span> <span class="n">PONI_y</span><span class="p">,</span> <span class="n">gamma</span><span class="p">,</span> <span class="n">alpha_i</span><span class="p">)</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">pixel_values</span><span class="p">])</span>
+        <span class="c1"># Combine the results</span>
+        <span class="n">processed_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">((</span><span class="n">qz_values</span><span class="p">,</span> <span class="n">intensity_values</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">processed_data</span>
+
+</pre></div>
+</div>
+<p>The parameters for the beamtime, using the same information you have set up in GIDVis, should be provided as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="c1"># Parameters from the beamtime experiment</span>
+<span class="n">lambda_</span> <span class="o">=</span> <span class="mf">1.24e-10</span>  <span class="c1"># Wavelength in meters</span>
+<span class="n">pixel_size</span> <span class="o">=</span> <span class="mf">172e-6</span>  <span class="c1"># Pixel size in meters</span>
+<span class="n">D</span> <span class="o">=</span> <span class="mf">0.35</span>  <span class="c1"># Distance between detector and sample in meters</span>
+<span class="n">PONI_x</span> <span class="o">=</span> <span class="mf">563.5</span>  <span class="c1"># Example value for PONI_x</span>
+<span class="n">delta</span> <span class="o">=</span> <span class="o">-</span><span class="mf">8.7</span>  <span class="c1"># In-plane angle in degrees</span>
+<span class="n">PONI_y</span> <span class="o">=</span> <span class="mi">1015</span>  <span class="c1"># Example value for PONI_y</span>
+<span class="n">alpha_i</span> <span class="o">=</span> <span class="mf">0.12</span>  <span class="c1"># Incident angle in degrees</span>
+
+<span class="c1"># Paths to files</span>
+<span class="c1"># In-plane file</span>
+<span class="n">file_path_qxy</span> <span class="o">=</span> <span class="s1">&#39;5151-pixel-integration-horizontal.txt&#39;</span>
+
+<span class="c1"># First out-of-plane angle and file</span>
+<span class="n">gamma_1</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.75</span>  <span class="c1"># Out-of-plane angle in degrees</span>
+<span class="n">file_path_qz_1</span> <span class="o">=</span> <span class="s1">&#39;5151-pixel-integration-vertical.txt&#39;</span>
+<span class="c1"># Second out-of-plane angle and file</span>
+<span class="n">gamma_2</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.4</span>  <span class="c1"># Out-of-plane angle in degrees</span>
+<span class="n">file_path_qz_2</span> <span class="o">=</span> <span class="s1">&#39;5152-pixel-integration-vertical.txt&#39;</span>
+
+</pre></div>
+</div>
+<p>You can see that the path to the profile along the horizontal direction of the detector is included. Additionally, the paths to the two profiles obtained at the two out-of-plane angles of the detector are specified, along with the corresponding angles at which they were measured.</p>
+<p>Next, we process the files, convert them to the appropriate units, and save the results in <code class="docutils literal notranslate"><span class="pre">.csv</span></code> files, which can then be opened with any standard software.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Process the files</span>
+<span class="n">processed_data_qxy</span> <span class="o">=</span> <span class="n">process_file</span><span class="p">(</span><span class="n">file_path_qxy</span><span class="p">,</span> <span class="n">lambda_</span><span class="p">,</span> <span class="n">pixel_size</span><span class="p">,</span> <span class="n">D</span><span class="p">,</span> <span class="n">PONI_x</span><span class="p">,</span> <span class="n">delta</span><span class="p">)</span>
+<span class="n">processed_data_qz_1</span> <span class="o">=</span> <span class="n">process_file</span><span class="p">(</span><span class="n">file_path_qz_1</span><span class="p">,</span> <span class="n">lambda_</span><span class="p">,</span> <span class="n">pixel_size</span><span class="p">,</span> <span class="n">D</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">PONI_y</span><span class="p">,</span> <span class="n">gamma_1</span><span class="p">,</span> <span class="n">alpha_i</span><span class="p">)</span>
+<span class="n">processed_data_qz_2</span> <span class="o">=</span> <span class="n">process_file</span><span class="p">(</span><span class="n">file_path_qz_2</span><span class="p">,</span> <span class="n">lambda_</span><span class="p">,</span> <span class="n">pixel_size</span><span class="p">,</span> <span class="n">D</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">PONI_y</span><span class="p">,</span> <span class="n">gamma_2</span><span class="p">,</span> <span class="n">alpha_i</span><span class="p">)</span>
+
+<span class="c1"># Convert q_xy to Å^-1 for q_xy, and make qxy &gt; 0</span>
+<span class="n">processed_data_qxy</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">processed_data_qxy</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mf">1e-10</span> <span class="o">*</span> <span class="o">-</span><span class="mi">1</span>
+
+<span class="c1"># Convert q_z to Å^-1 for q_z</span>
+<span class="n">processed_data_qz_1</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">processed_data_qz_1</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mf">1e-10</span>
+<span class="n">processed_data_qz_2</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">processed_data_qz_2</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mf">1e-10</span>
+
+<span class="c1"># Save the results to new files</span>
+<span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="s1">&#39;5151-processed-data-qxy.csv&#39;</span><span class="p">,</span> <span class="n">processed_data_qxy</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="s2">&quot;q_xy(A^-1);Intensity&quot;</span><span class="p">,</span> <span class="n">comments</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%f</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="s1">&#39;5151-processed-data-qz.csv&#39;</span><span class="p">,</span> <span class="n">processed_data_qz_1</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="s2">&quot;q_z(A^-1);Intensity&quot;</span><span class="p">,</span> <span class="n">comments</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%f</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="s1">&#39;5152-processed-data-qz.csv&#39;</span><span class="p">,</span> <span class="n">processed_data_qz_2</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="s2">&quot;q_z(A^-1);Intensity&quot;</span><span class="p">,</span> <span class="n">comments</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%f</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="plotting-and-comparing-the-results">
+<h3>Plotting and comparing the results<a class="headerlink" href="#plotting-and-comparing-the-results" title="Link to this heading">#</a></h3>
+<p>The code used for plotting the results is included in the accompanying Jupyter Notebook.</p>
+<section id="in-plane-profiles-directly-from-q-space-and-after-pixel-space-conversion">
+<h4>In-plane profiles: directly from q-space and after pixel-space conversion<a class="headerlink" href="#in-plane-profiles-directly-from-q-space-and-after-pixel-space-conversion" title="Link to this heading">#</a></h4>
+<p>Here, we compare the results obtained via direct integration in q-space using GIDVis and those derived after conversion from pixel-space.</p>
+<p><img alt="" src="../../../_images/integration-comparison-qxy-profiles.png" /></p>
+<p>The results are quite similar, with differences primarily arising from slight variations in the integration domain between pixel-space and q-space.</p>
+</section>
+<section id="out-of-plane-profiles-from-pixel-space-conversion">
+<h4>Out-of-plane profiles from pixel-space conversion<a class="headerlink" href="#out-of-plane-profiles-from-pixel-space-conversion" title="Link to this heading">#</a></h4>
+<p>First, we compare the out-of-plane profiles obtained from two detector positions.</p>
+<p><img alt="" src="../../../_images/integration-comparison-qz-profiles-gamma.png" /></p>
+<p>To address the missing peak at approximately 3.6 <span class="math notranslate nohighlight">\({\rm nm}^{-1}\)</span> in the curve at <code class="docutils literal notranslate"><span class="pre">gamma</span> <span class="pre">=</span> <span class="pre">-0.75</span></code>, we use the data measured at <code class="docutils literal notranslate"><span class="pre">gamma</span> <span class="pre">=</span> <span class="pre">-1.4</span></code> to fill this gap.</p>
+<p><img alt="" src="../../../_images/integration-comparison-qz-profiles-stitching.png" /></p>
+<p>We stitch the data together and save the combined profile in the file <code class="docutils literal notranslate"><span class="pre">5151-5152-stitched-data-qz.csv</span></code>.</p>
+<p><img alt="" src="../../../_images/integration-comparison-qz-profiles-stitched.png" /></p>
+</section>
+<section id="comparison-in-plane-and-out-of-plane-profiles">
+<h4>Comparison in-plane and out-of-plane profiles<a class="headerlink" href="#comparison-in-plane-and-out-of-plane-profiles" title="Link to this heading">#</a></h4>
+<p>An insightful visualization compares the in-plane and out-of-plane profiles, which can reveal information about the sample’s organization (e.g., face-on versus edge-on orientation). However, a detailed interpretation of this type of plot is beyond the scope of this tutorial and is best suited for users with expertise in the specific system being measured.</p>
+<p><img alt="" src="../../../_images/integration-comparison-in-out-plane.png" /></p>
+</section>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters/giwaxs/gidvis"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="powder-plot.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Powder plot</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="indexation.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Indexation</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#warning-out-of-plane-integration-is-often-not-rigorous">Warning: out-of-plane integration is often not rigorous</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integration-directly-in-q-space">Integration directly in q-space</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-plane">In-plane</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#out-of-plane">Out-of-plane</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-plane-and-out-of-plane-integrations-from-pixel-space">In-plane and out-of-plane integrations from pixel-space</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">In-plane</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Out-of-plane</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conversion-to-q-space">Conversion to q-space</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#q-xy"><strong><span class="math notranslate nohighlight">\(q_{xy}\)</span></strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#q-z"><strong><span class="math notranslate nohighlight">\(q_{z}\)</span></strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-of-conversion-using-python">Example of conversion using Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-and-comparing-the-results">Plotting and comparing the results</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#in-plane-profiles-directly-from-q-space-and-after-pixel-space-conversion">In-plane profiles: directly from q-space and after pixel-space conversion</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#out-of-plane-profiles-from-pixel-space-conversion">Out-of-plane profiles from pixel-space conversion</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-in-plane-and-out-of-plane-profiles">Comparison in-plane and out-of-plane profiles</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Arnaud HEMMERLE (Synchrotron SOLEIL)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

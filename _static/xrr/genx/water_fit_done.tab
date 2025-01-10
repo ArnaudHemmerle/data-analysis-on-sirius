@@ -1,0 +1,5 @@
+#Parameter	Value	Fit	Min	Max	Error	
+	0.0000e+00	False	0.0000e+00	0.0000e+00	-	
+inst.setI0	1.0000e+00	False	9.9000e-01	1.0100e+00	-	
+inst.setIbkg	0.0000e+00	False	0.0000e+00	0.0000e+00	-	
+Sub.setSigma	3.143420664494445	True	5.0000e-01	7.0000e+00	(-5.555e-02, 6.549e-02)	
