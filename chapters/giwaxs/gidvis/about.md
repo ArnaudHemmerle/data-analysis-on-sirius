@@ -2,7 +2,7 @@
 
 ## What is GIDVis?
 
-GIDVis is a MATLAB program designed to analyze grazing incidence diffraction images. It can be downloaded from [this link](https://www.if.tugraz.at/amd/GIDVis/index.html). Executable versions are available for Windows and Linux (no MATLAB required), or as source code in MATLAB. The official documentation is accessible on the GIDVis [website](https://www.if.tugraz.at/amd/GIDVis/index.html).
+GIDVis is a MATLAB program designed to analyze grazing incidence diffraction images. It can be downloaded from [this link](https://www.if.tugraz.at/amd/GIDVis/index.html) or [here](https://bitbucket.org/BenediktSchrode/gidvis/wiki/Downloads). Executable versions are available for Windows and Linux (no MATLAB required), or as source code in MATLAB. The official documentation is accessible on the GIDVis [website](https://www.if.tugraz.at/amd/GIDVis/index.html).
 
 ## Why use GIDVis?
 
