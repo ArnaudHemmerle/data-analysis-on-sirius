@@ -35,6 +35,9 @@ parts:
         - file: chapters/giwaxs/gidvis/indexation
         - file: chapters/giwaxs/gidvis/export-save
         - file: chapters/giwaxs/gidvis/troubleshooting
+      - file: chapters/giwaxs/pyfai/about
+        sections:
+        - file: chapters/giwaxs/pyfai/getting-started
       - file: chapters/giwaxs/extra/references
   # - caption: GISAXS (to be done)
   #   chapters:
