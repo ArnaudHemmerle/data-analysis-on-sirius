@@ -1,6 +1,6 @@
 # Getting started
 
-## Raw data & link to the notebook
+## Raw data & link to the electronic notebook
 
 In this tutorial, we use data acquired on a thin film of nonfullerene acceptors deposited on a silicon wafer, of interest for the field of organic photovoltaics. All the raw data required for this tutorial can be downloaded [here](../../../_static/giwaxs/raw_data.zip).
 
@@ -23,8 +23,26 @@ Also, note the white lines on the image. These are the dead zones of the 2D dete
 
 Additional useful information will be required from the notebook, which we will address step by step in the following sections.
 
-## Jupyter Notebook
+## Download the tutorial repository
 
-Download the Jupyter notebook if it is not already done : {download}`here <../../../_static/giwaxs/pyfai/giwaxs_analysis_pyfai.ipynb>`(right-click, then `Save the link as`). Open it in Jupyter, and check that you have all the right packages installed by running the first cell.
+Download the repository if it is not already done : [here](https://gitlab.synchrotron-soleil.fr/sirius-beamline/notebooks/tutorial_giwaxs_pyfai). We will start with the notebook named `giwaxs_analysis_pyfai.ipynb`. Open it in Jupyter, and check that you have all the right packages installed by running the first code cell. Install the missing packages.
 
-*INSERER IMAGE*
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.colors import SymLogNorm
+import matplotlib.patches as patches
+import pyFAI as pyFAI
+from PIL import Image
+import fabio
+import os
+
+import pyFAI.detectors
+from pyFAI.method_registry import IntegrationMethod
+from pyFAI.units import get_unit_fiber
+from pyFAI.multi_geometry import MultiGeometry
+
+print("Using pyFAI version: ", pyFAI.version)
+```
+
+This tutorial was done using pyFAI version ```2025.1.0```.

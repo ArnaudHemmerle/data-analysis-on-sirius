@@ -38,6 +38,12 @@ parts:
       - file: chapters/giwaxs/pyfai/about
         sections:
         - file: chapters/giwaxs/pyfai/getting-started
+        - file: chapters/giwaxs/pyfai/beam-parameters
+        - file: chapters/giwaxs/pyfai/convert-q-space
+        - file: chapters/giwaxs/pyfai/powder-plot
+        - file: chapters/giwaxs/pyfai/azimuthal-scan
+        - file: chapters/giwaxs/pyfai/ip-oop-integration
+        - file: chapters/giwaxs/pyfai/batch-analysis
       - file: chapters/giwaxs/extra/references
   # - caption: GISAXS (to be done)
   #   chapters:
@@ -52,12 +58,6 @@ parts:
         - file: chapters/xrf/pymca/calibration
         - file: chapters/xrf/pymca/troubleshooting
       - file: chapters/xrf/extra/references
-  # - caption: GIXD (to be done)
-  #   chapters:
-  #     - file: chapters/gixd/jupygixd/about
-  # - caption: GIXOS (to be done)
-  #   chapters:
-  #     - file: chapters/gixos/notebook/about
   - caption: Appendices
     chapters:
       - file: chapters/appendices/bibliography
