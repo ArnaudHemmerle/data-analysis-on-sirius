@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -194,6 +194,16 @@
 <li class="toctree-l2"><a class="reference internal" href="chapters/giwaxs/gidvis/indexation.html">Indexation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapters/giwaxs/gidvis/export-save.html">Save the project &amp; export images</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapters/giwaxs/gidvis/troubleshooting.html">Troubleshooting &amp; tutorial data</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="chapters/giwaxs/pyfai/about.html">Analyzing GIWAXS with pyFAI</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapters/giwaxs/pyfai/getting-started.html">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/giwaxs/pyfai/beam-parameters.html">Beam parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/giwaxs/pyfai/convert-q-space.html">Load images &amp; convert to q-space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/giwaxs/pyfai/powder-plot.html">Powder plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/giwaxs/pyfai/azimuthal-scan.html">Azimuthal scan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/giwaxs/pyfai/ip-oop-integration.html">In-plane &amp; out-of-plane integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/giwaxs/pyfai/batch-analysis.html">Batch analysis</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="chapters/giwaxs/extra/references.html">References</a></li>
@@ -405,7 +415,7 @@
   <section class="tex2jax_ignore mathjax_ignore" id="data-analysis-on-sirius">
 <h1>Data analysis on SIRIUS<a class="headerlink" href="#data-analysis-on-sirius" title="Link to this heading">#</a></h1>
 <p>This book provides explanation on data analysis acquired on the beamline SIRIUS at the <a class="reference external" href="https://www.synchrotron-soleil.fr">SOLEIL synchrotron</a>.</p>
-<p>To know more about the beamline, you can check these references <span id="id1">[<a class="reference internal" href="chapters/appendices/bibliography.html#id18" title="A. Hemmerle, N. Aubert, T. Moreno, P. Kékicheff, B. Heinrich, S. Spagnoli, M. Goldmann, G. Ciatto, and P. Fontaine. Opportunities and new developments for the study of surfaces and interfaces in soft condensed matter at the SIRIUS beamline of Synchrotron SOLEIL. Journal of Synchrotron Radiation, 31(1):162–176, January 2024. doi:10.1107/S1600577523008810.">1</a>, <a class="reference internal" href="chapters/appendices/bibliography.html#id8" title="G. Ciatto, M.H. Chu, P. Fontaine, N. Aubert, H. Renevier, and J.L. Deschanvres. SIRIUS: A new beamline for in situ X-ray diffraction and spectroscopy studies of advanced materials and nanostructures at the SOLEIL Synchrotron. Thin Solid Films, 617:48–54, October 2016. doi:10.1016/j.tsf.2016.03.069.">2</a>, <a class="reference internal" href="chapters/appendices/bibliography.html#id14" title="P. Fontaine, G. Ciatto, N. Aubert, and M. Goldmann. Soft Interfaces and Resonant Investigation on Undulator Source: A Surface X-ray Scattering Beamline to Study Organic Molecular Films at the SOLEIL Synchrotron. Science of Advanced Materials, 6(11):2312–2316, November 2014. doi:10.1166/sam.2014.2189.">3</a>]</span>.</p>
+<p>To know more about the beamline, you can check these references <span id="id1">[<a class="reference internal" href="chapters/appendices/bibliography.html#id19" title="A. Hemmerle, N. Aubert, T. Moreno, P. Kékicheff, B. Heinrich, S. Spagnoli, M. Goldmann, G. Ciatto, and P. Fontaine. Opportunities and new developments for the study of surfaces and interfaces in soft condensed matter at the SIRIUS beamline of Synchrotron SOLEIL. Journal of Synchrotron Radiation, 31(1):162–176, January 2024. doi:10.1107/S1600577523008810.">1</a>, <a class="reference internal" href="chapters/appendices/bibliography.html#id9" title="G. Ciatto, M.H. Chu, P. Fontaine, N. Aubert, H. Renevier, and J.L. Deschanvres. SIRIUS: A new beamline for in situ X-ray diffraction and spectroscopy studies of advanced materials and nanostructures at the SOLEIL Synchrotron. Thin Solid Films, 617:48–54, October 2016. doi:10.1016/j.tsf.2016.03.069.">2</a>, <a class="reference internal" href="chapters/appendices/bibliography.html#id15" title="P. Fontaine, G. Ciatto, N. Aubert, and M. Goldmann. Soft Interfaces and Resonant Investigation on Undulator Source: A Surface X-ray Scattering Beamline to Study Organic Molecular Films at the SOLEIL Synchrotron. Science of Advanced Materials, 6(11):2312–2316, November 2014. doi:10.1166/sam.2014.2189.">3</a>]</span>.</p>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">

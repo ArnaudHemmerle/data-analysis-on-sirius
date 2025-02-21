@@ -195,6 +195,16 @@
 <li class="toctree-l2"><a class="reference internal" href="../../giwaxs/gidvis/troubleshooting.html">Troubleshooting &amp; tutorial data</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../giwaxs/pyfai/about.html">Analyzing GIWAXS with pyFAI</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../giwaxs/pyfai/getting-started.html">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../giwaxs/pyfai/beam-parameters.html">Beam parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../giwaxs/pyfai/convert-q-space.html">Load images &amp; convert to q-space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../giwaxs/pyfai/powder-plot.html">Powder plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../giwaxs/pyfai/azimuthal-scan.html">Azimuthal scan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../giwaxs/pyfai/ip-oop-integration.html">In-plane &amp; out-of-plane integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../giwaxs/pyfai/batch-analysis.html">Batch analysis</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../../giwaxs/extra/references.html">References</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">XRF</span></p>
@@ -437,7 +447,7 @@
 </section>
 <section id="x-resolution-footprint-optional">
 <h2>X-resolution &amp; footprint : optional<a class="headerlink" href="#x-resolution-footprint-optional" title="Link to this heading">#</a></h2>
-<p>Accounting for experimental resolution and footprint effects is beyond the scope of this tutorial. In most cases, you can achieve satisfactory results without considering these effects. The resolution is only significant if your data show numerous well-defined oscillations, and the footprint effect becomes relevant if your sample is smaller than the projected beam footprint near the critical angle. For most XRR experiments at liquid-gas interfaces, these parameters are not necessary, but they may be important for solid samples. If needed, consult beamline staff or relevant literature for additional details <span id="id1">[<a class="reference internal" href="../../appendices/bibliography.html#id10" title="Jean Daillant and Alain Gibaud, editors. X-Ray and Neutron Reflectivity: Principles and Applications. Number 770 in Lecture Notes in Physics. Springer, Berlin, 2. ed edition, 2009. ISBN 978-3-540-88587-0 978-3-540-88588-7. doi:10.1007/3-540-48696-8.">5</a>, <a class="reference internal" href="../../appendices/bibliography.html#id47" title="G. Vignaud and A. Gibaud. REFLEX: a program for the analysis of specular X-ray and neutron reflectivity data. Journal of Applied Crystallography, 52(1):201–213, February 2019. doi:10.1107/S1600576718018186.">6</a>]</span>.</p>
+<p>Accounting for experimental resolution and footprint effects is beyond the scope of this tutorial. In most cases, you can achieve satisfactory results without considering these effects. The resolution is only significant if your data show numerous well-defined oscillations, and the footprint effect becomes relevant if your sample is smaller than the projected beam footprint near the critical angle. For most XRR experiments at liquid-gas interfaces, these parameters are not necessary, but they may be important for solid samples. If needed, consult beamline staff or relevant literature for additional details <span id="id1">[<a class="reference internal" href="../../appendices/bibliography.html#id11" title="Jean Daillant and Alain Gibaud, editors. X-Ray and Neutron Reflectivity: Principles and Applications. Number 770 in Lecture Notes in Physics. Springer, Berlin, 2. ed edition, 2009. ISBN 978-3-540-88587-0 978-3-540-88588-7. doi:10.1007/3-540-48696-8.">5</a>, <a class="reference internal" href="../../appendices/bibliography.html#id48" title="G. Vignaud and A. Gibaud. REFLEX: a program for the analysis of specular X-ray and neutron reflectivity data. Journal of Applied Crystallography, 52(1):201–213, February 2019. doi:10.1107/S1600576718018186.">6</a>]</span>.</p>
 <p>For this tutorial, configure the parameters as follows:</p>
 <ul class="simple">
 <li><p><strong>restype</strong>: <code class="docutils literal notranslate"><span class="pre">no</span> <span class="pre">conv</span></code></p></li>

@@ -1,6 +1,6 @@
 # Beam parameters
 
-In this section, we'll review the various parameters that need to be configured to work in q-space. We assume that you've collected all the required information from your beamline scientist, but you can also find them in the notebook. We will address the optional case of using a calibration sample to obtain beam information in a next section.
+In this section, we'll review the various parameters that need to be configured to work in q-space. **We assume that you've collected all the required information from your beamline scientist (wavelength, PONI, sample-detector distance ...), but you can also find them in the notebook.** We will address the optional case of using a calibration sample to obtain beam information in a next section.
 
 ## Beamtime/Experimental Setup
 

@@ -11,4 +11,4 @@ The GIWAXS setup of SIRIUS has been described in this paper {cite:p}`hemmerle202
 Here is the list of papers containing GIWAXS data acquired on SIRIUS on soft matter systems (updated in November 2024): {cite:p}`nath2024a, bai2024, kekicheff2024, rammal2024, liu2024, brixi2024, hemmerle2024, nath2024, yadav2023, swaraj2023, bai2024, king2023, heinrich2023, comeau2022, li2022, hicks2022, talnack2022, labiod2022, lashkov2021, galerne2021, wang2021, king2021, filonik2019, reichenberger2018`.
 
 ## Useful papers not related to SIRIUS
-Here are some papers that can be very interesting for general knowledge on GIWAXS and data analysis: {cite:p}`werzer2024, steele2023, rivnay2012`.
+Here are some papers that can be very interesting for general knowledge on GIWAXS and data analysis: {cite:p}`werzer2024, steele2023, mahmood2020, rivnay2012`.

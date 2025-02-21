@@ -1,0 +1,43 @@
+# Beam parameters
+wavelength = 1.24 # in Angstrom
+sample_detector_distance = 350 # in mm
+PONIx = 563.5 # in pixel
+PONIy = 1015 # in pixel
+delta = -8.7 # in deg
+incident_angle = 0.12 # in deg
+
+# Out-of-plane angle for each image
+gamma_A = -0.75 # in deg
+gamma_B = -1.4 # in deg
+
+# CONVERSION TO Q-SPACE
+# Maximum q in the images
+max_qip = 20 # in-plane, in 1/nm
+max_qoop = 20 # out-of-plane, in 1/nm
+
+# POWDER PLOT
+# Number of data points in the powder plots
+npt_powder_plot = 600
+
+# INTEGRATED IMAGE
+# Maximum 2_theta in the integrated image (azimuth vs 2_theta)
+max_tth = 12 # in-plane, in deg
+
+# RADIAL INTEGRATION
+# List of integration domains
+# Format : (left_tth, right_tth, bottom_chi, top_chi), all in deg
+domain_list = [(4.0, 4.4, -90, -40)]
+
+# IN-PLANE AND OUT-OF-PLANE INTEGRATION
+# Boundaries for the integration
+# In-plane -> Red rectangle
+left_qx = -0.7    # Left boundary (in nm^-1)
+right_qx = 0.7  # Right boundary (in nm^-1)
+
+# Out-of-plane -> Black rectangle
+bottom_qoop = 0.3   # Bottom boundary (in nm^-1)
+top_qoop = 0.7      # Top boundary (in nm^-1)
+
+# Define the limits of the IP & OOP plot
+q_min = 2
+q_max = 20

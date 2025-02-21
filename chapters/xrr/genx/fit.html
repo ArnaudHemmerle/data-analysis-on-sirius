@@ -195,6 +195,16 @@
 <li class="toctree-l2"><a class="reference internal" href="../../giwaxs/gidvis/troubleshooting.html">Troubleshooting &amp; tutorial data</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../giwaxs/pyfai/about.html">Analyzing GIWAXS with pyFAI</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../giwaxs/pyfai/getting-started.html">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../giwaxs/pyfai/beam-parameters.html">Beam parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../giwaxs/pyfai/convert-q-space.html">Load images &amp; convert to q-space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../giwaxs/pyfai/powder-plot.html">Powder plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../giwaxs/pyfai/azimuthal-scan.html">Azimuthal scan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../giwaxs/pyfai/ip-oop-integration.html">In-plane &amp; out-of-plane integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../giwaxs/pyfai/batch-analysis.html">Batch analysis</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../../giwaxs/extra/references.html">References</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">XRF</span></p>
@@ -433,7 +443,7 @@
 <h2>Fit the data<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <p>Adjust the min/max range to between <span class="math notranslate nohighlight">\(0.5\)</span> and <span class="math notranslate nohighlight">\(7\)</span> <span class="math notranslate nohighlight">\(\rm A\)</span>. Then, click on the arrow to start the fit.</p>
 <p><img alt="" src="../../../_images/fit-start.png" /></p>
-<p>The value of <code class="docutils literal notranslate"><span class="pre">sigma</span></code> will update in real-time, and after a few seconds, the process will stop and ask if you want to keep the fit. Click “Yes.” The best-fit value for <code class="docutils literal notranslate"><span class="pre">sigma</span></code> should be close to <span class="math notranslate nohighlight">\(3\)</span> <span class="math notranslate nohighlight">\(\rm A\)</span>, a typical value for the roughness induced by capillary waves at the air-water interface at room temperature <span id="id2">[<a class="reference internal" href="../../appendices/bibliography.html#id5" title="A. Braslau, P. S. Pershan, G. Swislow, B. M. Ocko, and J. Als-Nielsen. Capillary waves on the surface of simple liquids measured by x-ray reflectivity. Physical Review A, 38(5):2457–2470, September 1988. doi:10.1103/PhysRevA.38.2457.">7</a>]</span>. Simulate the results after the fit to visualize the best-fit curve.</p>
+<p>The value of <code class="docutils literal notranslate"><span class="pre">sigma</span></code> will update in real-time, and after a few seconds, the process will stop and ask if you want to keep the fit. Click “Yes.” The best-fit value for <code class="docutils literal notranslate"><span class="pre">sigma</span></code> should be close to <span class="math notranslate nohighlight">\(3\)</span> <span class="math notranslate nohighlight">\(\rm A\)</span>, a typical value for the roughness induced by capillary waves at the air-water interface at room temperature <span id="id2">[<a class="reference internal" href="../../appendices/bibliography.html#id6" title="A. Braslau, P. S. Pershan, G. Swislow, B. M. Ocko, and J. Als-Nielsen. Capillary waves on the surface of simple liquids measured by x-ray reflectivity. Physical Review A, 38(5):2457–2470, September 1988. doi:10.1103/PhysRevA.38.2457.">7</a>]</span>. Simulate the results after the fit to visualize the best-fit curve.</p>
 <p>Once the fit is complete, click the calculator icon in the top bar to estimate the error on your fit parameter.</p>
 <p><img alt="" src="../../../_images/fit-done.png" /></p>
 <p>Here, the result is <span class="math notranslate nohighlight">\(\sigma = 3.14\)</span> <span class="math notranslate nohighlight">\(\rm A\)</span>, with an asymmetric error bar: <span class="math notranslate nohighlight">\(\sigma_{inf} = 3.14 - 0.06 \simeq 3.1\)</span> <span class="math notranslate nohighlight">\(\rm A\)</span> and <span class="math notranslate nohighlight">\(\sigma_{sup} = 3.14 + 0.07 \simeq 3.2\)</span> <span class="math notranslate nohighlight">\(\rm A\)</span>.</p>
