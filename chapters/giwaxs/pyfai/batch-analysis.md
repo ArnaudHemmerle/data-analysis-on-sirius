@@ -1,21 +1,28 @@
-# Powder plot
+# Batch analysis
 
-A powder plot represents the intensity as a function of the q vector, defined as $q=\sqrt{q_{xy}^2+q_z^2}$. This allows for comparison with powder diffractograms obtained from other sources.
+If you have multiple scans to analyze, you can use the `batch_giwaxs_analysis_pyfai.ipynb` notebook. This notebook follows the same processing steps as the one used in the previous sections and requires the same input parameters.
 
-You can adjust the **number of data points** in the powder plot (which directly affects its resolution), then run the cell.
+However, there are some key differences:
+
+## 1. Specifying the list of scans
+
+You need to define the list of scans to be processed, using **pairs of scan numbers** corresponding to the two detector angles (`gamma_A` and `gamma_B`).
 
 ```python
-# Modify only the number of data points you want in the powder plots, and run the cell
-npt_powder_plot = 600
-
-...
-
+# List of pairs of scan numbers corresponding to (gamma_A, gamma_B)
+scan_list = [(5151, 5152), (5153,5154)]
 ```
 
-Running the cell will generate the powder plot in q-space as well as in 2$\theta$.
+## 2. Performing azimuthal integration on multiple domains
 
-Additionally, `dat` files containing the corresponding data for further analysis will be generated.
+You can specify multiple integration regions for different azimuthal scans. The integration domains should be listed in the following format:
 
-![](images/powder_plot_q.png)
+```python
+# AZIMUTHAL SCAN
+# List of integration domains
+# Format : (left_tth, right_tth, bottom_chi, top_chi), all in deg
+domain_list = [(4, 4.4, -90, -40), (3.2, 3.8, -50, 0)]
+```
 
-![](images/powder_plot_tth.png)
+## Running the batch processing
+Once all the parameters are set, you can run the entire notebook. The processed data will be automatically exported into individual subfolders within the `processed_data/` directory.
