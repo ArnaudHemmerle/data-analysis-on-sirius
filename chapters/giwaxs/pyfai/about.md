@@ -19,4 +19,4 @@ To follow this tutorial, you should have:
 
 ## Please cite pyFAI!
 
-The SIRIUS beamline is not involved in the development of pyFAI; we are simply users, just like you. However, it is clear that a significant amount of time and effort has gone into creating this powerful tool. If you use pyFAI to analyze your data, please cite the following paper {cite:p}`ashiotis2015.
+The SIRIUS beamline is not involved in the development of pyFAI; we are simply users, just like you. However, it is clear that a significant amount of time and effort has gone into creating this powerful tool. If you use pyFAI to analyze your data, please cite the following paper {cite:p}`ashiotis2015`.
