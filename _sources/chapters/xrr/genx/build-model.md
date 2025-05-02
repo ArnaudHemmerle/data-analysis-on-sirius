@@ -120,7 +120,7 @@ Notice that the new value is outside the default min/max range. GenX applies a c
 - $d_{\rm tail}$ between $16$ and $25$ $\rm A$,
 - $d_{\rm head}$ between $5$ and $11$ $\rm A$.
 
-For now, keep the density values unchanged.
+For now, keep the density range values unchanged.
 
 ![](images/build-model-adjust-range.png)
 

@@ -188,6 +188,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../../xrr/genx/troubleshooting.html">Troubleshooting</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../xrr/refnx/about.html">Analyzing XRR with refnx</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../xrr/refnx/getting-started.html">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../xrr/refnx/import-data.html">Import &amp; plot data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../xrr/refnx/create-model.html">Create a model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../xrr/refnx/fit-data.html">Fit the data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../xrr/refnx/lipid.html">More complex example: a lipid monolayer</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../../xrr/extra/references.html">References</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">GIWAXS</span></p>
@@ -450,7 +458,7 @@ document.write(`
 <h1>In-plane and out-of-plane integration<a class="headerlink" href="#in-plane-and-out-of-plane-integration" title="Link to this heading">#</a></h1>
 <section id="warning-out-of-plane-integration-is-often-not-rigorous">
 <h2>Warning: out-of-plane integration is often not rigorous<a class="headerlink" href="#warning-out-of-plane-integration-is-often-not-rigorous" title="Link to this heading">#</a></h2>
-<p>With a single angle of incidence, it is impossible to fully cover the range of <span class="math notranslate nohighlight">\(q_z\)</span> at <span class="math notranslate nohighlight">\(q_{xy}=0\)</span> due to the limitations of measuring the Ewald sphere with a planar 2D detector <span id="id1">[<a class="reference internal" href="../../appendices/bibliography.html#id42" title="Julian A. Steele, Eduardo Solano, David Hardy, Damara Dayton, Dylan Ladd, Keith White, Peng Chen, Jingwei Hou, Haowei Huang, Rafikul Ali Saha, Lianzhou Wang, Feng Gao, Johan Hofkens, Maarten B. J. Roeffaers, Dmitry Chernyshov, and Michael F. Toney. How to GIWAXS: Grazing Incidence Wide Angle X-Ray Scattering Applied to Metal Halide Perovskite Thin Films. Advanced Energy Materials, 13(27):2300760, 2023. doi:10.1002/aenm.202300760.">17</a>]</span>.</p>
+<p>With a single angle of incidence, it is impossible to fully cover the range of <span class="math notranslate nohighlight">\(q_z\)</span> at <span class="math notranslate nohighlight">\(q_{xy}=0\)</span> due to the limitations of measuring the Ewald sphere with a planar 2D detector <span id="id1">[<a class="reference internal" href="../../appendices/bibliography.html#id43" title="Julian A. Steele, Eduardo Solano, David Hardy, Damara Dayton, Dylan Ladd, Keith White, Peng Chen, Jingwei Hou, Haowei Huang, Rafikul Ali Saha, Lianzhou Wang, Feng Gao, Johan Hofkens, Maarten B. J. Roeffaers, Dmitry Chernyshov, and Michael F. Toney. How to GIWAXS: Grazing Incidence Wide Angle X-Ray Scattering Applied to Metal Halide Perovskite Thin Films. Advanced Energy Materials, 13(27):2300760, 2023. doi:10.1002/aenm.202300760.">18</a>]</span>.</p>
 <p>To rigorously obtain the out-of-plane region of reciprocal space at <span class="math notranslate nohighlight">\(q_{xy}=0\)</span>, techniques such as X-ray reflectivity should be used.</p>
 <p>An approximation often made is to ignore the corrections required by the Ewald sphere, and integrate on <span class="math notranslate nohighlight">\(q_x\)</span> vs. <span class="math notranslate nohighlight">\(q_z\)</span> maps. In this case, note that comparisons between in-plane and out-of-plane integrations are mostly qualitative, particularly at high <span class="math notranslate nohighlight">\(q_z\)</span> values.</p>
 <p>We will see different approaches here to obtain in-plane and out-of-plane integrations.</p>

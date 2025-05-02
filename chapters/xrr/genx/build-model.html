@@ -188,6 +188,14 @@
 <li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../refnx/about.html">Analyzing XRR with refnx</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../refnx/getting-started.html">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../refnx/import-data.html">Import &amp; plot data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../refnx/create-model.html">Create a model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../refnx/fit-data.html">Fit the data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../refnx/lipid.html">More complex example: a lipid monolayer</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../extra/references.html">References</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">GIWAXS</span></p>
@@ -486,7 +494,7 @@ document.write(`
 <p>Name this first layer <code class="docutils literal notranslate"><span class="pre">tail</span></code>. We will estimate the initial value of each parameter as follows.</p>
 <section id="thickness-d">
 <h4><em>Thickness <span class="math notranslate nohighlight">\(d\)</span></em><a class="headerlink" href="#thickness-d" title="Link to this heading">#</a></h4>
-<p>A good starting point for the thickness of the tail layer is the theoretical length of an elongated aliphatic chain with <span class="math notranslate nohighlight">\(n\)</span> carbons in all-trans conformation, given by <span id="id1">[<a class="reference internal" href="../../appendices/bibliography.html#id21" title="Jacob Israelachvili. Intermolecular and Surface Forces. Academic press, 2011.">8</a>, <a class="reference internal" href="../../appendices/bibliography.html#id47" title="Charles Tanford. The Hydrophobic Effect: Formation of Micelles and Biological. J.Wiley, 1980.">9</a>]</span>:</p>
+<p>A good starting point for the thickness of the tail layer is the theoretical length of an elongated aliphatic chain with <span class="math notranslate nohighlight">\(n\)</span> carbons in all-trans conformation, given by <span id="id1">[<a class="reference internal" href="../../appendices/bibliography.html#id21" title="Jacob Israelachvili. Intermolecular and Surface Forces. Academic press, 2011.">8</a>, <a class="reference internal" href="../../appendices/bibliography.html#id48" title="Charles Tanford. The Hydrophobic Effect: Formation of Micelles and Biological. J.Wiley, 1980.">9</a>]</span>:</p>
 <div class="math notranslate nohighlight">
 \[
 L_{\rm max}[{\rm nm}] = 0.126n + 0.146
@@ -565,7 +573,7 @@ L_{\rm max}[{\rm nm}] = 0.095n + 0.146.
 <li><p><span class="math notranslate nohighlight">\(d_{\rm tail}\)</span> between <span class="math notranslate nohighlight">\(16\)</span> and <span class="math notranslate nohighlight">\(25\)</span> <span class="math notranslate nohighlight">\(\rm A\)</span>,</p></li>
 <li><p><span class="math notranslate nohighlight">\(d_{\rm head}\)</span> between <span class="math notranslate nohighlight">\(5\)</span> and <span class="math notranslate nohighlight">\(11\)</span> <span class="math notranslate nohighlight">\(\rm A\)</span>.</p></li>
 </ul>
-<p>For now, keep the density values unchanged.</p>
+<p>For now, keep the density range values unchanged.</p>
 <p><img alt="" src="../../../_images/build-model-adjust-range.png" /></p>
 </section>
 <section id="start-the-fit">
