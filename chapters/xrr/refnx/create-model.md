@@ -51,7 +51,10 @@ stack = helium_atm | water_bulk
 Finally, the XRR corresponding to this initial guess is calculated and plotted against the experimental data.
 
 ```python
-model = ReflectModel(stack, bkg=0)
+model = ReflectModel(stack, bkg=0, dq=0.1)
 ```
+
+ We assume that the background correction is perfect and the background can be set to zero. We use a constant intrumental resolution of $dQ/Q=0.1\%$ that is usually sufficient to describe experimental data. See [here](https://refnx.readthedocs.io/en/latest/faq.html) if a more complex resolution function is needed.
+
 
 ![](images/create-model-simulate.png)

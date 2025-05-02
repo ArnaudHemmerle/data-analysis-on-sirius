@@ -19,12 +19,26 @@ qz_exp = data_exp_temp["qz(nm-1)"].to_numpy() / 10.  # Convert nm⁻¹ to Å⁻�
 R_exp = data_exp_temp["refl"].to_numpy()
 R_err_exp = data_exp_temp["err_refl"].to_numpy()
 
+# Filter out points where R_exp < 0
+valid_mask = R_exp > 0
+qz_exp = qz_exp[valid_mask]
+R_exp = R_exp[valid_mask]
+R_err_exp = R_err_exp[valid_mask]
+
 # Construct the data for refnx
-data_exp = Data1D(data=(qz_exp, R_exp, R_err_exp))
+data_exp = Data1D(data=(qz_exp, R_exp))
 
 ...
 ```
 
-The text file contains several columns. We extract only those corresponding to the wavevector $q_z$, the reflectivity $R$, and its absolute error $R_{\rm err}$. The wavevector $q_z$ is converted to units of $A^{-1}$, as required by refnx. Note that $R_{\rm err}$ results from a simple background subtraction, performed by taking ROIs on the 2D detector—either from the left/right or top/bottom of the reflected beam. If a more sophisticated background subtraction is required, it should be performed separately beforehand.
+The text file contains several columns. We extract only those corresponding to the wavevector $q_z$, the reflectivity $R$, and its absolute error $R_{\rm err}$. The wavevector $q_z$ is converted to units of $A^{-1}$, as required by refnx.
+
+Note that a basic background subtraction has already been applied to the raw data from SIRIUS, typically by selecting ROIs on the 2D detector (e.g., from the left/right or top/bottom of the reflected beam). If a more advanced background subtraction is needed, it should be performed beforehand. A filter is also applied here to remove any data points where the reflectivity is negative—often a consequence of background subtraction.
+
+Finally, while the fitting procedure shown below is typically more robust when error bars are ignored, you can include them by constructing the data object as follows:
+
+```python
+data_exp = Data1D(data=(qz_exp, R_exp, R_err_exp))
+```
 
 ![](images/import-data-xrr-measurement.png)

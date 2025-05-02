@@ -24,6 +24,7 @@ parts:
         - file: chapters/xrr/refnx/import-data
         - file: chapters/xrr/refnx/create-model
         - file: chapters/xrr/refnx/fit-data
+        - file: chapters/xrr/refnx/lipid
       - file: chapters/xrr/extra/references
   - caption: GIWAXS
     chapters:
