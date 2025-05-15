@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Powder plot &#8212; X-Ray Reflectivity on SIRIUS</title>
+    <title>Powder &amp; cake plot &#8212; X-Ray Reflectivity on SIRIUS</title>
   
   
   
@@ -218,7 +218,7 @@
 <li class="toctree-l2"><a class="reference internal" href="getting-started.html">Getting started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="beam-parameters.html">Beam parameters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="convert-q-space.html">Load images &amp; convert to q-space</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Powder plot</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Powder &amp; cake plot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="azimuthal-scan.html">Azimuthal scan</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ip-oop-integration.html">In-plane &amp; out-of-plane integration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="batch-analysis.html">Batch analysis</a></li>
@@ -424,7 +424,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Powder plot</h1>
+    <h1>Powder & cake plot</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -438,8 +438,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="powder-plot">
-<h1>Powder plot<a class="headerlink" href="#powder-plot" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="powder-cake-plot">
+<h1>Powder &amp; cake plot<a class="headerlink" href="#powder-cake-plot" title="Link to this heading">#</a></h1>
 <p>A powder plot represents the intensity as a function of the q vector, defined as <span class="math notranslate nohighlight">\(q=\sqrt{q_{xy}^2+q_z^2}\)</span>. This allows for comparison with powder diffractograms obtained from other sources.</p>
 <p>You can adjust the <strong>number of data points</strong> in the powder plot (which directly affects its resolution), then run the cell.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Modify only the number of data points you want in the powder plots, and run the cell</span>
@@ -451,8 +451,22 @@ document.write(`
 </div>
 <p>Running the cell will generate the powder plot in q-space as well as in 2<span class="math notranslate nohighlight">\(\theta\)</span>.</p>
 <p>Additionally, <code class="docutils literal notranslate"><span class="pre">dat</span></code> files containing the corresponding data for further analysis will be generated.</p>
-<p><img alt="" src="../../../_images/powder_plot_q.png" /></p>
-<p><img alt="" src="../../../_images/powder_plot_tth.png" /></p>
+<p><img alt="" src="../../../_images/powder-plot-q.png" /></p>
+<p><img alt="" src="../../../_images/powder-plot-tth.png" /></p>
+<p>It is sometimes more interesting to focus only on a wedge for the integration, and not on the whole image. This integration is often called a “cake” or “sector” plot.</p>
+<p>You can adjust the <strong>number of data points</strong>, the <strong>azimuthal range</strong>, the <strong>maximal q range</strong> on which you wish to integrate, and then run the cell.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Modify only the number of data points you want in the cake plots,</span>
+<span class="c1"># the azimuth range, the radius in q, and run the cell</span>
+<span class="n">npt_cake_plot</span> <span class="o">=</span> <span class="mi">600</span>
+<span class="n">azimuth_range</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">180</span><span class="p">,</span><span class="o">-</span><span class="mi">160</span><span class="p">)</span> <span class="c1"># in deg</span>
+<span class="n">q_radius</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># in nm-1</span>
+
+<span class="o">...</span>
+
+</pre></div>
+</div>
+<p><img alt="" src="../../../_images/powder-plot-images-cake.png" /></p>
+<p><img alt="" src="../../../_images/powder-plot-cake-q.png" /></p>
 </section>
 
     <script type="text/x-thebe-config">

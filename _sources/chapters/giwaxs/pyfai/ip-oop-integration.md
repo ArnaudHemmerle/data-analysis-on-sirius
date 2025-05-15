@@ -4,7 +4,7 @@
 
 With a single angle of incidence, it is impossible to fully cover the range of $q_z$ at $q_{xy}=0$ due to the limitations of measuring the Ewald sphere with a planar 2D detector {cite:p}`steele2023`.
 
-To rigorously obtain the out-of-plane region of reciprocal space at $q_{xy}=0$, other techniques such as X-ray reflectivity should be used.
+To rigorously obtain the out-of-plane region of reciprocal space at $q_{xy}=0$, other techniques should be used, such as a $2\theta$ scan at a fixed incident angle.
 
 An approximation often made is to ignore the corrections required by the Ewald sphere, and integrate on $q_x$ vs. $q_z$ maps. In this case, note that comparisons between in-plane and out-of-plane integrations are mostly qualitative, particularly at high $q_z$ values.
 
