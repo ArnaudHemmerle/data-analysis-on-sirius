@@ -45,4 +45,4 @@ from pyFAI.multi_geometry import MultiGeometry
 print("Using pyFAI version: ", pyFAI.version)
 ```
 
-This tutorial was done using pyFAI version ```2025.1.0```.
+This tutorial was done using pyFAI version ```2025.3.0```.
