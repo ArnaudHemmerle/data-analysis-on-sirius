@@ -19,4 +19,4 @@ from refnx.analysis import Transform, CurveFitter, Objective, Model, Parameter
 print("Using refnx version: ", refnx.version.version)
 ```
 
-This tutorial was done using pyFAI version ```0.1.38```.
+This tutorial was done using refnx version ```0.1.38```.
