@@ -26,31 +26,32 @@ parts:
         - file: chapters/xrr/refnx/fit-data
         - file: chapters/xrr/refnx/lipid
       - file: chapters/xrr/extra/references
-  - caption: GIWAXS
+  - caption: GIXS
     chapters:
-      - file: chapters/giwaxs/gidvis/about
+      - file: chapters/gixs/gidvis/about
         sections:
-        - file: chapters/giwaxs/gidvis/getting-started
-        - file: chapters/giwaxs/gidvis/import-data
-        - file: chapters/giwaxs/gidvis/beam-parameters
-        - file: chapters/giwaxs/gidvis/convert-q-space
-        - file: chapters/giwaxs/gidvis/merge
-        - file: chapters/giwaxs/gidvis/calibration
-        - file: chapters/giwaxs/gidvis/powder-plot
-        - file: chapters/giwaxs/gidvis/integration
-        - file: chapters/giwaxs/gidvis/indexation
-        - file: chapters/giwaxs/gidvis/export-save
-        - file: chapters/giwaxs/gidvis/troubleshooting
-      - file: chapters/giwaxs/pyfai/about
+        - file: chapters/gixs/gidvis/getting-started
+        - file: chapters/gixs/gidvis/import-data
+        - file: chapters/gixs/gidvis/beam-parameters
+        - file: chapters/gixs/gidvis/convert-q-space
+        - file: chapters/gixs/gidvis/merge
+        - file: chapters/gixs/gidvis/calibration
+        - file: chapters/gixs/gidvis/powder-plot
+        - file: chapters/gixs/gidvis/integration
+        - file: chapters/gixs/gidvis/indexation
+        - file: chapters/gixs/gidvis/export-save
+        - file: chapters/gixs/gidvis/troubleshooting
+      - file: chapters/gixs/pyfai/about
         sections:
-        - file: chapters/giwaxs/pyfai/getting-started
-        - file: chapters/giwaxs/pyfai/beam-parameters
-        - file: chapters/giwaxs/pyfai/convert-q-space
-        - file: chapters/giwaxs/pyfai/powder-plot
-        - file: chapters/giwaxs/pyfai/azimuthal-scan
-        - file: chapters/giwaxs/pyfai/ip-oop-integration
-        - file: chapters/giwaxs/pyfai/batch-analysis
-      - file: chapters/giwaxs/extra/references
+        - file: chapters/gixs/pyfai/getting-started
+        - file: chapters/gixs/pyfai/beam-parameters
+        - file: chapters/gixs/pyfai/convert-q-space
+        - file: chapters/gixs/pyfai/powder-plot
+        - file: chapters/gixs/pyfai/azimuthal-scan
+        - file: chapters/gixs/pyfai/ip-oop-integration
+        - file: chapters/gixs/pyfai/batch-analysis
+      #- file: chapters/gixs/insight/about
+      - file: chapters/gixs/extra/references
   # - caption: GISAXS (to be done)
   #   chapters:
   #     - file: chapters/gisaxs/bornagain/about
