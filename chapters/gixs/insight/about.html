@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Batch analysis &#8212; X-Ray Reflectivity on SIRIUS</title>
+    <title>Analyzing GIWAXS and GISAXS with INSIGHT &#8212; X-Ray Reflectivity on SIRIUS</title>
   
   
   
@@ -57,11 +57,11 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/gixs/pyfai/batch-analysis';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/gixs/insight/about';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Analyzing GIWAXS and GISAXS with INSIGHT" href="../insight/about.html" />
-    <link rel="prev" title="In-plane &amp; out-of-plane integration" href="ip-oop-integration.html" />
+    <link rel="next" title="References" href="../extra/references.html" />
+    <link rel="prev" title="Batch analysis" href="../pyfai/batch-analysis.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -212,17 +212,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../gidvis/troubleshooting.html">Troubleshooting &amp; tutorial data</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="about.html">Analyzing GIWAXS with pyFAI</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="getting-started.html">Getting started</a></li>
-<li class="toctree-l2"><a class="reference internal" href="beam-parameters.html">Beam parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="convert-q-space.html">Load images &amp; convert to q-space</a></li>
-<li class="toctree-l2"><a class="reference internal" href="powder-plot.html">Powder &amp; cake plot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="azimuthal-scan.html">Azimuthal scan</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ip-oop-integration.html">In-plane &amp; out-of-plane integration</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Batch analysis</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../pyfai/about.html">Analyzing GIWAXS with pyFAI</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../pyfai/getting-started.html">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pyfai/beam-parameters.html">Beam parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pyfai/convert-q-space.html">Load images &amp; convert to q-space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pyfai/powder-plot.html">Powder &amp; cake plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pyfai/azimuthal-scan.html">Azimuthal scan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pyfai/ip-oop-integration.html">In-plane &amp; out-of-plane integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pyfai/batch-analysis.html">Batch analysis</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../insight/about.html">Analyzing GIWAXS and GISAXS with INSIGHT</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Analyzing GIWAXS and GISAXS with INSIGHT</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../extra/references.html">References</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">XRF</span></p>
@@ -311,7 +311,7 @@
       
       
       
-      <li><a href="https://github.com/ArnaudHemmerle/xrr_on_sirius/issues/new?title=Issue%20on%20page%20%2Fchapters/gixs/pyfai/batch-analysis.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/ArnaudHemmerle/xrr_on_sirius/issues/new?title=Issue%20on%20page%20%2Fchapters/gixs/insight/about.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -341,7 +341,7 @@
       
       
       
-      <li><a href="../../../_sources/chapters/gixs/pyfai/batch-analysis.md" target="_blank"
+      <li><a href="../../../_sources/chapters/gixs/insight/about.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -425,7 +425,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Batch analysis</h1>
+    <h1>Analyzing GIWAXS and GISAXS with INSIGHT</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -435,9 +435,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specifying-the-list-of-scans">1. Specifying the list of scans</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#performing-azimuthal-integration-on-multiple-domains">2. Performing azimuthal integration on multiple domains</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-batch-processing">Running the batch processing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-insight">What is INSIGHT?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-use-insight">Why use INSIGHT?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#please-cite-insight">Please cite INSIGHT!</a></li>
 </ul>
             </nav>
         </div>
@@ -449,31 +450,33 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="batch-analysis">
-<h1>Batch analysis<a class="headerlink" href="#batch-analysis" title="Link to this heading">#</a></h1>
-<p>If you have multiple scans to analyze, you can use the <code class="docutils literal notranslate"><span class="pre">batch_giwaxs_analysis_pyfai.ipynb</span></code> notebook. This notebook follows the same processing steps as the one used in the previous sections and requires the same input parameters.</p>
-<p>However, there are some key differences:</p>
-<section id="specifying-the-list-of-scans">
-<h2>1. Specifying the list of scans<a class="headerlink" href="#specifying-the-list-of-scans" title="Link to this heading">#</a></h2>
-<p>You need to define the list of scans to be processed, using <strong>pairs of scan numbers</strong> corresponding to the two detector angles (<code class="docutils literal notranslate"><span class="pre">gamma_A</span></code> and <code class="docutils literal notranslate"><span class="pre">gamma_B</span></code>).</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># List of pairs of scan numbers corresponding to (gamma_A, gamma_B)</span>
-<span class="n">scan_list</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">5151</span><span class="p">,</span> <span class="mi">5152</span><span class="p">),</span> <span class="p">(</span><span class="mi">5153</span><span class="p">,</span><span class="mi">5154</span><span class="p">)]</span>
-</pre></div>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="analyzing-giwaxs-and-gisaxs-with-insight">
+<h1>Analyzing GIWAXS and GISAXS with INSIGHT<a class="headerlink" href="#analyzing-giwaxs-and-gisaxs-with-insight" title="Link to this heading">#</a></h1>
+<section id="what-is-insight">
+<h2>What is INSIGHT?<a class="headerlink" href="#what-is-insight" title="Link to this heading">#</a></h2>
+<p>INSIGHT is a Python library for processing and reducing 2D grazing-incidence wide-and small-angle X-ray scattering (GIWAXS/GISAXS) data. The official webpage is <a class="reference external" href="https://www.ph.nat.tum.de/en/functmat/forschung-research/insight/">here</a>.</p>
 </section>
-<section id="performing-azimuthal-integration-on-multiple-domains">
-<h2>2. Performing azimuthal integration on multiple domains<a class="headerlink" href="#performing-azimuthal-integration-on-multiple-domains" title="Link to this heading">#</a></h2>
-<p>You can specify multiple integration regions for different azimuthal scans. The integration domains should be listed in the following format:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># AZIMUTHAL SCAN</span>
-<span class="c1"># List of integration domains</span>
-<span class="c1"># Format : (left_tth, right_tth, bottom_chi, top_chi), all in deg</span>
-<span class="n">domain_list</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">4</span><span class="p">,</span> <span class="mf">4.4</span><span class="p">,</span> <span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="o">-</span><span class="mi">40</span><span class="p">),</span> <span class="p">(</span><span class="mf">3.2</span><span class="p">,</span> <span class="mf">3.8</span><span class="p">,</span> <span class="o">-</span><span class="mi">50</span><span class="p">,</span> <span class="mi">0</span><span class="p">)]</span>
-</pre></div>
-</div>
+<section id="why-use-insight">
+<h2>Why use INSIGHT?<a class="headerlink" href="#why-use-insight" title="Link to this heading">#</a></h2>
+<p>INSIGHT is a script-based and object-oriented Python package containing several modules and classes. It provides a
+comprehensive workflow customized for GISAXS/GIWAXS
+data reduction that accompanies the scientist from visualizing
+raw data to the final plotting or exporting of the reduced data.</p>
+<p>This tutorial aims to help SIRIUS users efficiently use INSIGHT to convert detector images into reciprocal space and perform integration. It is based on the notebooks available on <a class="reference external" href="https://gitlab.synchrotron-soleil.fr/sirius-beamline/notebooks/tutorial_insight">this</a> repository. You should first download the whole repository to follow the tutorial.</p>
 </section>
-<section id="running-the-batch-processing">
-<h2>Running the batch processing<a class="headerlink" href="#running-the-batch-processing" title="Link to this heading">#</a></h2>
-<p>Once all the parameters are set, you can run the entire notebook. The processed data will be automatically exported into individual subfolders within the <code class="docutils literal notranslate"><span class="pre">processed_data/</span></code> directory.</p>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
+<p>To follow this tutorial, you should have:</p>
+<ul class="simple">
+<li><p>a working Jupyter environment,</p></li>
+<li><p>the repository aforementioned,</p></li>
+<li><p>basic knowledge of Python programming,</p></li>
+<li><p>the ability to install required packages.</p></li>
+</ul>
+</section>
+<section id="please-cite-insight">
+<h2>Please cite INSIGHT!<a class="headerlink" href="#please-cite-insight" title="Link to this heading">#</a></h2>
+<p>The SIRIUS beamline is not involved in the development of INSIGHT; we are simply users, just like you. However, it is clear that a significant amount of time and effort has gone into creating this powerful tool. If you use INSIGHT to analyze your data, please cite the following paper <span id="id1">[<a class="reference internal" href="../../appendices/bibliography.html#id2" title="Manuel A. Reus, Lennart K. Reb, David P. Kosbahn, Stephan V. Roth, and Peter Müller-Buschbaum. \emph INSIGHT : \emph In Situ heuristic tool for the efficient reduction of grazing-incidence X-ray scattering data. Journal of Applied Crystallography, 57(2):509–528, April 2024. doi:10.1107/S1600576723011159.">20</a>]</span>.</p>
 </section>
 </section>
 
@@ -490,7 +493,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./chapters/gixs/pyfai"
+            path: "./chapters/gixs/insight"
         },
         predefinedOutput: true
     }
@@ -508,20 +511,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="ip-oop-integration.html"
+       href="../pyfai/batch-analysis.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">In-plane &amp; out-of-plane integration</p>
+        <p class="prev-next-title">Batch analysis</p>
       </div>
     </a>
     <a class="right-next"
-       href="../insight/about.html"
+       href="../extra/references.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Analyzing GIWAXS and GISAXS with INSIGHT</p>
+        <p class="prev-next-title">References</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -541,9 +544,10 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specifying-the-list-of-scans">1. Specifying the list of scans</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#performing-azimuthal-integration-on-multiple-domains">2. Performing azimuthal integration on multiple domains</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-batch-processing">Running the batch processing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-insight">What is INSIGHT?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-use-insight">Why use INSIGHT?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#please-cite-insight">Please cite INSIGHT!</a></li>
 </ul>
   </nav></div>
 
