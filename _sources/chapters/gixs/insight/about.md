@@ -1,4 +1,4 @@
-# Analyzing GIWAXS and GISAXS with INSIGHT
+# Analyzing GIXS with INSIGHT
 
 ## What is INSIGHT?
 

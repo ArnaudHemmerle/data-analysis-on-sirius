@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Analyzing GIWAXS and GISAXS with INSIGHT &#8212; X-Ray Reflectivity on SIRIUS</title>
+    <title>Analyzing GIXS with INSIGHT &#8212; X-Ray Reflectivity on SIRIUS</title>
   
   
   
@@ -57,10 +57,12 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/gixs/insight/about';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="References" href="../extra/references.html" />
+    <link rel="next" title="Getting started" href="getting-started.html" />
     <link rel="prev" title="Batch analysis" href="../pyfai/batch-analysis.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -222,7 +224,16 @@
 <li class="toctree-l2"><a class="reference internal" href="../pyfai/batch-analysis.html">Batch analysis</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Analyzing GIWAXS and GISAXS with INSIGHT</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Analyzing GIXS with INSIGHT</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beam-parameters.html">Beam parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="convert-q-space.html">Load images &amp; convert to q-space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="powder-plot.html">Powder &amp; cake plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azimuthal-map.html">Azimuthal map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="indexing.html">Indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gisaxs.html">GISAXS</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../extra/references.html">References</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">XRF</span></p>
@@ -425,7 +436,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Analyzing GIWAXS and GISAXS with INSIGHT</h1>
+    <h1>Analyzing GIXS with INSIGHT</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -450,8 +461,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="analyzing-giwaxs-and-gisaxs-with-insight">
-<h1>Analyzing GIWAXS and GISAXS with INSIGHT<a class="headerlink" href="#analyzing-giwaxs-and-gisaxs-with-insight" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="analyzing-gixs-with-insight">
+<h1>Analyzing GIXS with INSIGHT<a class="headerlink" href="#analyzing-gixs-with-insight" title="Link to this heading">#</a></h1>
 <section id="what-is-insight">
 <h2>What is INSIGHT?<a class="headerlink" href="#what-is-insight" title="Link to this heading">#</a></h2>
 <p>INSIGHT is a Python library for processing and reducing 2D grazing-incidence wide-and small-angle X-ray scattering (GIWAXS/GISAXS) data. The official webpage is <a class="reference external" href="https://www.ph.nat.tum.de/en/functmat/forschung-research/insight/">here</a>.</p>
@@ -476,8 +487,10 @@ raw data to the final plotting or exporting of the reduced data.</p>
 </section>
 <section id="please-cite-insight">
 <h2>Please cite INSIGHT!<a class="headerlink" href="#please-cite-insight" title="Link to this heading">#</a></h2>
-<p>The SIRIUS beamline is not involved in the development of INSIGHT; we are simply users, just like you. However, it is clear that a significant amount of time and effort has gone into creating this powerful tool. If you use INSIGHT to analyze your data, please cite the following paper <span id="id1">[<a class="reference internal" href="../../appendices/bibliography.html#id3">20</a>]</span>.</p>
+<p>The SIRIUS beamline is not involved in the development of INSIGHT; we are simply users, just like you. However, it is clear that a significant amount of time and effort has gone into creating this powerful tool. If you use INSIGHT to analyze your data, please cite the following paper <span id="id1">[<a class="reference internal" href="../../appendices/bibliography.html#id4" title="Manuel A. Reus, Lennart K. Reb, David P. Kosbahn, Stephan V. Roth, and Peter Müller-Buschbaum. INSIGHT : in situ heuristic tool for the efficient reduction of grazing-incidence X-ray scattering data. Journal of Applied Crystallography, 57(2):509–528, April 2024. doi:10.1107/S1600576723011159.">20</a>]</span>.</p>
 </section>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -520,11 +533,11 @@ raw data to the final plotting or exporting of the reduced data.</p>
       </div>
     </a>
     <a class="right-next"
-       href="../extra/references.html"
+       href="getting-started.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">References</p>
+        <p class="prev-next-title">Getting started</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
