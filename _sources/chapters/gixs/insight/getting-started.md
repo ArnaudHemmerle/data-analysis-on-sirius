@@ -2,7 +2,7 @@
 
 ## Raw data & link to the electronic notebook
 
-In this tutorial, we use GIWAXS data acquired on a thin film of block copolymers deposited on a silicon wafer, and GISAXS data on nanostructured bi-metallic nanocluster {cite:p}`alvarez-fernandez2020`. All the raw data required for this tutorial can be downloaded [here](../../../_static/gixs/raw_data.zip). We will first focus on GIWAXS.
+In this tutorial, we use GIWAXS data acquired on a thin film of block copolymers deposited on a silicon wafer, and GISAXS data on nanostructured bi-metallic nanocluster {cite:p}`alvarez-fernandez2020`. All the raw data required for this tutorial can be downloaded [here](../../../_static/gixs/raw_data_insight.zip). We will first focus on GIWAXS.
 
 It consists of TIFF files that are the integrated images output from our 2D detector. To know the details of each file from your experiment, you need to refer to the electronic notebook. Below is a screenshot of the notebook corresponding to scan 429:
 
