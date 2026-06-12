@@ -50,7 +50,15 @@ parts:
         - file: chapters/gixs/pyfai/azimuthal-scan
         - file: chapters/gixs/pyfai/ip-oop-integration
         - file: chapters/gixs/pyfai/batch-analysis
-      #- file: chapters/gixs/insight/about
+      - file: chapters/gixs/insight/about
+        sections:
+        - file: chapters/gixs/insight/getting-started
+        - file: chapters/gixs/insight/beam-parameters
+        - file: chapters/gixs/insight/convert-q-space
+        - file: chapters/gixs/insight/powder-plot
+        - file: chapters/gixs/insight/azimuthal-map
+        - file: chapters/gixs/insight/indexing
+        - file: chapters/gixs/insight/gisaxs
       - file: chapters/gixs/extra/references
   # - caption: GISAXS (to be done)
   #   chapters:
