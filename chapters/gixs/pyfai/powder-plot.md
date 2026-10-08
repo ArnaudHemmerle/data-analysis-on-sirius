@@ -24,17 +24,20 @@ It is sometimes more interesting to focus only on a wedge for the integration, a
 
 You can adjust the **number of data points**, the **azimuthal range**, the **maximal q range** on which you wish to integrate, and then run the cell.
 
-```python
-# Modify only the number of data points you want in the cake plots,
-# the azimuth range, the radius in q, and run the cell
-npt_cake_plot = 600
-azimuth_range = (-180,-160) # in deg
-q_radius = 10 # in nm-1
+The azimuth is defined so that it is 0° along $q_{OOP}$, and +90° along $q_{IP}$.
 
+```python
+# ==================== User Parameters ====================
+# Modify only the parameters below:
+npt_cake_plot = 600
+user_azimuth_range = (70, 90)  # User convention: 0° = out-of-plane (q_oop), 90° = in-plane (q_ip)
+q_radius = 10  # in nm^-1
+
+# =========================================================
 ...
 
 ```
 
-![](images/powder-plot-images-cake.png)
+![](images/powder-plot-image-cake.png)
 
 ![](images/powder-plot-cake-q.png)

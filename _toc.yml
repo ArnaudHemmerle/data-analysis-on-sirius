@@ -47,22 +47,10 @@ parts:
         - file: chapters/gixs/pyfai/beam-parameters
         - file: chapters/gixs/pyfai/convert-q-space
         - file: chapters/gixs/pyfai/powder-plot
-        - file: chapters/gixs/pyfai/azimuthal-scan
+        - file: chapters/gixs/pyfai/azimuthal-integration
         - file: chapters/gixs/pyfai/ip-oop-integration
         - file: chapters/gixs/pyfai/batch-analysis
-      - file: chapters/gixs/insight/about
-        sections:
-        - file: chapters/gixs/insight/getting-started
-        - file: chapters/gixs/insight/beam-parameters
-        - file: chapters/gixs/insight/convert-q-space
-        - file: chapters/gixs/insight/powder-plot
-        - file: chapters/gixs/insight/azimuthal-map
-        - file: chapters/gixs/insight/indexing
-        - file: chapters/gixs/insight/gisaxs
       - file: chapters/gixs/extra/references
-  # - caption: GISAXS (to be done)
-  #   chapters:
-  #     - file: chapters/gisaxs/bornagain/about
   - caption: XRF
     chapters:
       - file: chapters/xrf/pymca/about

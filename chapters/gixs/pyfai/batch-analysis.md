@@ -9,8 +9,11 @@ However, there are some key differences:
 You need to define the list of scans to be processed, using **pairs of scan numbers** corresponding to the two detector angles (`gamma_A` and `gamma_B`).
 
 ```python
-# List of pairs of scan numbers corresponding to (gamma_A, gamma_B)
-scan_list = [(5151, 5152), (5153,5154)]
+# List of image pair scan numbers corresponding to (gamma_A, gamma_B)
+scan_list = [
+    (5151, 5152),
+    (5153, 5154),
+]
 ```
 
 ## 2. Performing azimuthal integration on multiple domains
@@ -18,10 +21,12 @@ scan_list = [(5151, 5152), (5153,5154)]
 You can specify multiple integration regions for different azimuthal scans. The integration domains should be listed in the following format:
 
 ```python
-# AZIMUTHAL SCAN
-# List of integration domains
-# Format : (left_tth, right_tth, bottom_chi, top_chi), all in deg
-domain_list = [(4, 4.4, -90, -40), (3.2, 3.8, -50, 0)]
+# ==================== AZIMUTHAL SLICE DOMAINS ====================
+# List of integration domains (for multi-slice evaluation)
+azimuthal_domain_list = [
+    (3.7 - 0.2, 3.7 + 0.2, 45.0, 90.0),
+    (5. - 0.2, 5. + 0.2, 0.0, 90.0),
+]
 ```
 
 ## Running the batch processing

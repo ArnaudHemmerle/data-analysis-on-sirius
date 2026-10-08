@@ -25,24 +25,28 @@ Additional useful information will be required from the notebook, which we will 
 
 ## Download the tutorial repository
 
-Download the repository if it is not already done : [here](https://gitlab.synchrotron-soleil.fr/sirius-beamline/notebooks/tutorial_giwaxs_pyfai). We will start with the notebook named `giwaxs_analysis_pyfai.ipynb`. Open it in Jupyter, and check that you have all the right packages installed by running the first code cell. Install the missing packages.
+Download the repository if it is not already done : [here](https://gitlab.synchrotron-soleil.fr/sirius-beamline/notebooks/tutorial_giwaxs_pyfai/-/archive/v1.0/tutorial_giwaxs_pyfai-v1.0.zip). We will start with the notebook named `giwaxs_analysis_pyfai.ipynb`. Open it in Jupyter, and check that you have all the right packages installed by running the first code cell. Install the missing packages.
 
 ```python
-import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib.colors import SymLogNorm
-import matplotlib.patches as patches
-import pyFAI as pyFAI
-from PIL import Image
-import fabio
 import os
+from pathlib import Path
 
+import fabio
+import matplotlib.patches as patches
+import matplotlib.pyplot as plt
+import numpy as np
+from matplotlib.colors import LogNorm, SymLogNorm
+from PIL import Image
+from scipy.interpolate import RegularGridInterpolator
+from scipy.ndimage import binary_dilation
+
+import pyFAI
 import pyFAI.detectors
 from pyFAI.method_registry import IntegrationMethod
-from pyFAI.units import get_unit_fiber
 from pyFAI.multi_geometry import MultiGeometry
+from pyFAI.units import get_unit_fiber
 
-print("Using pyFAI version: ", pyFAI.version)
+print("Using pyFAI version:", pyFAI.version)
 ```
 
-This tutorial was done using pyFAI version ```2025.3.0```.
+This tutorial was done using pyFAI version ```2026.9.0```.

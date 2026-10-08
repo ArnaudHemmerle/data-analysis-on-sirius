@@ -13,6 +13,8 @@ PONIx = 563.5 # in pixel
 PONIy = 1015 # in pixel
 delta = -8.7 # in deg
 incident_angle = 0.12 # in deg
+pixel_size = 0.172 # mm
+detector_dimensions = (1043,981) # pixels
 
 # Out-of-plane angle for each image
 gamma_A = -0.75 # in deg
@@ -20,9 +22,9 @@ gamma_B = -1.4 # in deg
 
 # Modify with the path to your images
 # img_A measured at gamma_A
-path_A = "raw_data/SIRIUS_2024_11_22_5151_pilatus_sum.tiff"
 # img_B measured at gamma_B
-path_B = "raw_data/SIRIUS_2024_11_22_5152_pilatus_sum.tiff"
+path_A = Path("raw_data") / "SIRIUS_2024_11_22_5151_pilatus_sum.tiff"
+path_B = Path("raw_data") / "SIRIUS_2024_11_22_5152_pilatus_sum.tiff"
 ```
 
 Additional information on specific parameters:
@@ -30,6 +32,7 @@ Additional information on specific parameters:
 - **delta**: In-plane angle of the detector, in degrees.
 - **incident_angle**: The incident angle on the sample, in degrees. It is written in the PDF notebook as ```thetai```.
 - **gamma_A/gamma_B**: The two out-of-plane angles of the detector, in degrees, corresponding here to scans ```5151``` at $\gamma=-0.75$ and ```5152``` at $\gamma=-1.4$.
+- **pixel_size & detector_dimensions**: Parameters of the Pilatus3 1M. Leave untouched.
 
 All this information can be found in the PDF electronic notebook:
 ![](images/beam-parameters-gammaA.png)
@@ -58,9 +61,9 @@ gamma_B = -0.75 # in deg
 
 # Modify with the path to your images
 # img_A measured at gamma_A
-path_A = "raw_data/SIRIUS_2024_11_22_5151_pilatus_sum.tiff"
 # img_B measured at gamma_B
-path_B = "raw_data/SIRIUS_2024_11_22_5151_pilatus_sum.tiff"
+path_A = Path("raw_data") / "SIRIUS_2024_11_22_5151_pilatus_sum.tiff"
+path_B = Path("raw_data") / "SIRIUS_2024_11_22_5151_pilatus_sum.tiff"
 ```
 
 

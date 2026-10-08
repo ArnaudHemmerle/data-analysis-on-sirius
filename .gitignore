@@ -3,3 +3,4 @@ _build/
 snippets.txt
 _static/giwaxs/pyfai/processed_data/
 _static/giwaxs/pyfai/.ipynb_checkpoints/
+not_in_git/
