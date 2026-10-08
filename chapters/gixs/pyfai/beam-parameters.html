@@ -219,19 +219,9 @@
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Beam parameters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="convert-q-space.html">Load images &amp; convert to q-space</a></li>
 <li class="toctree-l2"><a class="reference internal" href="powder-plot.html">Powder &amp; cake plot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="azimuthal-scan.html">Azimuthal scan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azimuthal-integration.html">Azimuthal integration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ip-oop-integration.html">In-plane &amp; out-of-plane integration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="batch-analysis.html">Batch analysis</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../insight/about.html">Analyzing GIXS with INSIGHT</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../insight/getting-started.html">Getting started</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../insight/beam-parameters.html">Beam parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../insight/convert-q-space.html">Load images &amp; convert to q-space</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../insight/powder-plot.html">Powder &amp; cake plot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../insight/azimuthal-map.html">Azimuthal map</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../insight/indexing.html">Indexing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../insight/gisaxs.html">GISAXS</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../extra/references.html">References</a></li>
@@ -470,6 +460,8 @@ document.write(`
 <span class="n">PONIy</span> <span class="o">=</span> <span class="mi">1015</span> <span class="c1"># in pixel</span>
 <span class="n">delta</span> <span class="o">=</span> <span class="o">-</span><span class="mf">8.7</span> <span class="c1"># in deg</span>
 <span class="n">incident_angle</span> <span class="o">=</span> <span class="mf">0.12</span> <span class="c1"># in deg</span>
+<span class="n">pixel_size</span> <span class="o">=</span> <span class="mf">0.172</span> <span class="c1"># mm</span>
+<span class="n">detector_dimensions</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1043</span><span class="p">,</span><span class="mi">981</span><span class="p">)</span> <span class="c1"># pixels</span>
 
 <span class="c1"># Out-of-plane angle for each image</span>
 <span class="n">gamma_A</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.75</span> <span class="c1"># in deg</span>
@@ -477,9 +469,9 @@ document.write(`
 
 <span class="c1"># Modify with the path to your images</span>
 <span class="c1"># img_A measured at gamma_A</span>
-<span class="n">path_A</span> <span class="o">=</span> <span class="s2">&quot;raw_data/SIRIUS_2024_11_22_5151_pilatus_sum.tiff&quot;</span>
 <span class="c1"># img_B measured at gamma_B</span>
-<span class="n">path_B</span> <span class="o">=</span> <span class="s2">&quot;raw_data/SIRIUS_2024_11_22_5152_pilatus_sum.tiff&quot;</span>
+<span class="n">path_A</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;raw_data&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="s2">&quot;SIRIUS_2024_11_22_5151_pilatus_sum.tiff&quot;</span>
+<span class="n">path_B</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;raw_data&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="s2">&quot;SIRIUS_2024_11_22_5152_pilatus_sum.tiff&quot;</span>
 </pre></div>
 </div>
 <p>Additional information on specific parameters:</p>
@@ -488,6 +480,7 @@ document.write(`
 <li><p><strong>delta</strong>: In-plane angle of the detector, in degrees.</p></li>
 <li><p><strong>incident_angle</strong>: The incident angle on the sample, in degrees. It is written in the PDF notebook as <code class="docutils literal notranslate"><span class="pre">thetai</span></code>.</p></li>
 <li><p><strong>gamma_A/gamma_B</strong>: The two out-of-plane angles of the detector, in degrees, corresponding here to scans <code class="docutils literal notranslate"><span class="pre">5151</span></code> at <span class="math notranslate nohighlight">\(\gamma=-0.75\)</span> and <code class="docutils literal notranslate"><span class="pre">5152</span></code> at <span class="math notranslate nohighlight">\(\gamma=-1.4\)</span>.</p></li>
+<li><p><strong>pixel_size &amp; detector_dimensions</strong>: Parameters of the Pilatus3 1M. Leave untouched.</p></li>
 </ul>
 <p>All this information can be found in the PDF electronic notebook:
 <img alt="" src="../../../_images/beam-parameters-gammaA.png" />
@@ -513,9 +506,9 @@ document.write(`
 
 <span class="c1"># Modify with the path to your images</span>
 <span class="c1"># img_A measured at gamma_A</span>
-<span class="n">path_A</span> <span class="o">=</span> <span class="s2">&quot;raw_data/SIRIUS_2024_11_22_5151_pilatus_sum.tiff&quot;</span>
 <span class="c1"># img_B measured at gamma_B</span>
-<span class="n">path_B</span> <span class="o">=</span> <span class="s2">&quot;raw_data/SIRIUS_2024_11_22_5151_pilatus_sum.tiff&quot;</span>
+<span class="n">path_A</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;raw_data&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="s2">&quot;SIRIUS_2024_11_22_5151_pilatus_sum.tiff&quot;</span>
+<span class="n">path_B</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;raw_data&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="s2">&quot;SIRIUS_2024_11_22_5151_pilatus_sum.tiff&quot;</span>
 </pre></div>
 </div>
 </section>

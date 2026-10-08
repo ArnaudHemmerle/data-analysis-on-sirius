@@ -219,19 +219,9 @@
 <li class="toctree-l2"><a class="reference internal" href="beam-parameters.html">Beam parameters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="convert-q-space.html">Load images &amp; convert to q-space</a></li>
 <li class="toctree-l2"><a class="reference internal" href="powder-plot.html">Powder &amp; cake plot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="azimuthal-scan.html">Azimuthal scan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azimuthal-integration.html">Azimuthal integration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ip-oop-integration.html">In-plane &amp; out-of-plane integration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="batch-analysis.html">Batch analysis</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../insight/about.html">Analyzing GIXS with INSIGHT</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../insight/getting-started.html">Getting started</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../insight/beam-parameters.html">Beam parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../insight/convert-q-space.html">Load images &amp; convert to q-space</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../insight/powder-plot.html">Powder &amp; cake plot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../insight/azimuthal-map.html">Azimuthal map</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../insight/indexing.html">Indexing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../insight/gisaxs.html">GISAXS</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../extra/references.html">References</a></li>
@@ -482,25 +472,29 @@ document.write(`
 </section>
 <section id="download-the-tutorial-repository">
 <h2>Download the tutorial repository<a class="headerlink" href="#download-the-tutorial-repository" title="Link to this heading">#</a></h2>
-<p>Download the repository if it is not already done : <a class="reference external" href="https://gitlab.synchrotron-soleil.fr/sirius-beamline/notebooks/tutorial_giwaxs_pyfai">here</a>. We will start with the notebook named <code class="docutils literal notranslate"><span class="pre">giwaxs_analysis_pyfai.ipynb</span></code>. Open it in Jupyter, and check that you have all the right packages installed by running the first code cell. Install the missing packages.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.colors</span><span class="w"> </span><span class="kn">import</span> <span class="n">SymLogNorm</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.patches</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">patches</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">pyFAI</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pyFAI</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">PIL</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">fabio</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<p>Download the repository if it is not already done : <a class="reference external" href="https://gitlab.synchrotron-soleil.fr/sirius-beamline/notebooks/tutorial_giwaxs_pyfai/-/archive/v1.0/tutorial_giwaxs_pyfai-v1.0.zip">here</a>. We will start with the notebook named <code class="docutils literal notranslate"><span class="pre">giwaxs_analysis_pyfai.ipynb</span></code>. Open it in Jupyter, and check that you have all the right packages installed by running the first code cell. Install the missing packages.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
 
+<span class="kn">import</span><span class="w"> </span><span class="nn">fabio</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.patches</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">patches</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.colors</span><span class="w"> </span><span class="kn">import</span> <span class="n">LogNorm</span><span class="p">,</span> <span class="n">SymLogNorm</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">PIL</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.interpolate</span><span class="w"> </span><span class="kn">import</span> <span class="n">RegularGridInterpolator</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.ndimage</span><span class="w"> </span><span class="kn">import</span> <span class="n">binary_dilation</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">pyFAI</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pyFAI.detectors</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">pyFAI.method_registry</span><span class="w"> </span><span class="kn">import</span> <span class="n">IntegrationMethod</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">pyFAI.units</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_unit_fiber</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">pyFAI.multi_geometry</span><span class="w"> </span><span class="kn">import</span> <span class="n">MultiGeometry</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyFAI.units</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_unit_fiber</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Using pyFAI version: &quot;</span><span class="p">,</span> <span class="n">pyFAI</span><span class="o">.</span><span class="n">version</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Using pyFAI version:&quot;</span><span class="p">,</span> <span class="n">pyFAI</span><span class="o">.</span><span class="n">version</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>This tutorial was done using pyFAI version <code class="docutils literal notranslate"><span class="pre">2025.3.0</span></code>.</p>
+<p>This tutorial was done using pyFAI version <code class="docutils literal notranslate"><span class="pre">2026.9.0</span></code>.</p>
 </section>
 </section>
 

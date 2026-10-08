@@ -31,11 +31,20 @@ The next step is to convert from pixel space to q-space.
 Modify the maximum in-plane and out-of-plane q you want to reach in the image, and run the cell.
 
 ```python
+# ==================== User Parameters ====================
 # Modify only the maximum q you want to reach in the images, and run the cell
-max_qip = 20 #in-plane, in 1/nm
-max_qoop = 20 #out-of-plane, in 1/nm
+max_qip = 20  # in-plane, in 1/nm
+max_qoop = 20  # out-of-plane, in 1/nm
 
+# =========================================================
 ...
 ```
 
 ![](images/convert-q-space-images_qspace.png)
+
+
+## Merging images
+
+The next cell should be executed as is, to merge the two detector images into a single one.
+
+![](images/convert-q-space-merged-reciprocal-space-map.png)

@@ -217,19 +217,9 @@
 <li class="toctree-l2"><a class="reference internal" href="beam-parameters.html">Beam parameters</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Load images &amp; convert to q-space</a></li>
 <li class="toctree-l2"><a class="reference internal" href="powder-plot.html">Powder &amp; cake plot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="azimuthal-scan.html">Azimuthal scan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azimuthal-integration.html">Azimuthal integration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ip-oop-integration.html">In-plane &amp; out-of-plane integration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="batch-analysis.html">Batch analysis</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../insight/about.html">Analyzing GIXS with INSIGHT</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../insight/getting-started.html">Getting started</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../insight/beam-parameters.html">Beam parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../insight/convert-q-space.html">Load images &amp; convert to q-space</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../insight/powder-plot.html">Powder &amp; cake plot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../insight/azimuthal-map.html">Azimuthal map</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../insight/indexing.html">Indexing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../insight/gisaxs.html">GISAXS</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../extra/references.html">References</a></li>
@@ -446,6 +436,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-images">Load images</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conversion-to-q-space">Conversion to q-space</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#merging-images">Merging images</a></li>
 </ul>
             </nav>
         </div>
@@ -484,14 +475,21 @@ document.write(`
 <h2>Conversion to q-space<a class="headerlink" href="#conversion-to-q-space" title="Link to this heading">#</a></h2>
 <p>The next step is to convert from pixel space to q-space.</p>
 <p>Modify the maximum in-plane and out-of-plane q you want to reach in the image, and run the cell.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Modify only the maximum q you want to reach in the images, and run the cell</span>
-<span class="n">max_qip</span> <span class="o">=</span> <span class="mi">20</span> <span class="c1">#in-plane, in 1/nm</span>
-<span class="n">max_qoop</span> <span class="o">=</span> <span class="mi">20</span> <span class="c1">#out-of-plane, in 1/nm</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ==================== User Parameters ====================</span>
+<span class="c1"># Modify only the maximum q you want to reach in the images, and run the cell</span>
+<span class="n">max_qip</span> <span class="o">=</span> <span class="mi">20</span>  <span class="c1"># in-plane, in 1/nm</span>
+<span class="n">max_qoop</span> <span class="o">=</span> <span class="mi">20</span>  <span class="c1"># out-of-plane, in 1/nm</span>
 
+<span class="c1"># =========================================================</span>
 <span class="o">...</span>
 </pre></div>
 </div>
 <p><img alt="" src="../../../_images/convert-q-space-images_qspace.png" /></p>
+</section>
+<section id="merging-images">
+<h2>Merging images<a class="headerlink" href="#merging-images" title="Link to this heading">#</a></h2>
+<p>The next cell should be executed as is, to merge the two detector images into a single one.</p>
+<p><img alt="" src="../../../_images/convert-q-space-merged-reciprocal-space-map.png" /></p>
 </section>
 </section>
 
@@ -561,6 +559,7 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-images">Load images</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conversion-to-q-space">Conversion to q-space</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#merging-images">Merging images</a></li>
 </ul>
   </nav></div>
 

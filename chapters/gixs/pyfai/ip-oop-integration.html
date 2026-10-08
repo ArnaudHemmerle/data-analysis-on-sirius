@@ -63,7 +63,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Batch analysis" href="batch-analysis.html" />
-    <link rel="prev" title="Azimuthal scan" href="azimuthal-scan.html" />
+    <link rel="prev" title="Azimuthal integration" href="azimuthal-integration.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -219,19 +219,9 @@
 <li class="toctree-l2"><a class="reference internal" href="beam-parameters.html">Beam parameters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="convert-q-space.html">Load images &amp; convert to q-space</a></li>
 <li class="toctree-l2"><a class="reference internal" href="powder-plot.html">Powder &amp; cake plot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="azimuthal-scan.html">Azimuthal scan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azimuthal-integration.html">Azimuthal integration</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">In-plane &amp; out-of-plane integration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="batch-analysis.html">Batch analysis</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../insight/about.html">Analyzing GIXS with INSIGHT</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../insight/getting-started.html">Getting started</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../insight/beam-parameters.html">Beam parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../insight/convert-q-space.html">Load images &amp; convert to q-space</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../insight/powder-plot.html">Powder &amp; cake plot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../insight/azimuthal-map.html">Azimuthal map</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../insight/indexing.html">Indexing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../insight/gisaxs.html">GISAXS</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../extra/references.html">References</a></li>
@@ -446,10 +436,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#warning-out-of-plane-integration-is-often-not-rigorous">Warning: out-of-plane integration is often not rigorous</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#warning-integrations-needs-to-be-performed-in-q-xy-q-z">Warning: integrations needs to be performed in <span class="math notranslate nohighlight">\(q_{xy}/q_{z}\)</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-of-the-integration-area">Definition of the integration area</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#performing-the-integration">Performing the integration</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#save-parameters">Save parameters</a></li>
 </ul>
             </nav>
         </div>
@@ -463,24 +452,29 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="in-plane-out-of-plane-integration">
 <h1>In-plane &amp; out-of-plane integration<a class="headerlink" href="#in-plane-out-of-plane-integration" title="Link to this heading">#</a></h1>
-<section id="warning-out-of-plane-integration-is-often-not-rigorous">
-<h2>Warning: out-of-plane integration is often not rigorous<a class="headerlink" href="#warning-out-of-plane-integration-is-often-not-rigorous" title="Link to this heading">#</a></h2>
+<section id="warning-integrations-needs-to-be-performed-in-q-xy-q-z">
+<h2>Warning: integrations needs to be performed in <span class="math notranslate nohighlight">\(q_{xy}/q_{z}\)</span><a class="headerlink" href="#warning-integrations-needs-to-be-performed-in-q-xy-q-z" title="Link to this heading">#</a></h2>
 <p>With a single angle of incidence, it is impossible to fully cover the range of <span class="math notranslate nohighlight">\(q_z\)</span> at <span class="math notranslate nohighlight">\(q_{xy}=0\)</span> due to the limitations of measuring the Ewald sphere with a planar 2D detector <span id="id1">[<a class="reference internal" href="../../appendices/bibliography.html#id46" title="Julian A. Steele, Eduardo Solano, David Hardy, Damara Dayton, Dylan Ladd, Keith White, Peng Chen, Jingwei Hou, Haowei Huang, Rafikul Ali Saha, Lianzhou Wang, Feng Gao, Johan Hofkens, Maarten B. J. Roeffaers, Dmitry Chernyshov, and Michael F. Toney. How to GIWAXS: Grazing Incidence Wide Angle X-Ray Scattering Applied to Metal Halide Perovskite Thin Films. Advanced Energy Materials, 13(27):2300760, 2023. doi:10.1002/aenm.202300760.">18</a>]</span>.</p>
-<p>To rigorously obtain the out-of-plane region of reciprocal space at <span class="math notranslate nohighlight">\(q_{xy}=0\)</span>, other techniques should be used, such as diffraction in specular conditions.</p>
+<p>To rigorously obtain the out-of-plane region of reciprocal space at <span class="math notranslate nohighlight">\(q_{xy}=0\)</span>, other techniques should be used, such as diffraction in specular conditions (Bragg-Brentano geometry).</p>
 <p>An approximation often made is to ignore the corrections required by the Ewald sphere, and integrate on <span class="math notranslate nohighlight">\(q_x\)</span> vs. <span class="math notranslate nohighlight">\(q_z\)</span> maps. In this case, note that comparisons between in-plane and out-of-plane integrations are mostly qualitative, particularly at high <span class="math notranslate nohighlight">\(q_z\)</span> values.</p>
+<p>Here, we will be rigourous, and perform integration in <span class="math notranslate nohighlight">\(q_{xy}\)</span> vs <span class="math notranslate nohighlight">\(q_{z}\)</span> maps.</p>
 </section>
 <section id="definition-of-the-integration-area">
 <h2>Definition of the integration area<a class="headerlink" href="#definition-of-the-integration-area" title="Link to this heading">#</a></h2>
 <p>The <strong>in-plane integration</strong> will be performed within the <strong>black rectangle</strong>, while the <strong>out-of-plane integration</strong> will be performed within the <strong>red rectangle</strong>. Define the boundaries in the cell below and run it.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the left and right boundaries for the in-plane integration</span>
-<span class="c1"># -&gt; Red rectangle</span>
-<span class="n">left_qx</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.7</span>    <span class="c1"># Set your desired left boundary (in nm^-1)</span>
-<span class="n">right_qx</span> <span class="o">=</span> <span class="mf">0.7</span>  <span class="c1"># Set your desired right boundary (in nm^-1)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ==================== User Parameters ====================</span>
 
-<span class="c1"># Define the bottom and top boundaries for the out-of-plane integration</span>
-<span class="c1"># -&gt; Black rectangle</span>
+<span class="c1"># Define the left and right boundaries for the out-of-plane integration profile (I vs qoop)</span>
+<span class="c1"># -&gt; Red rectangle (integration along qoop within this qip window)</span>
+<span class="n">left_qip</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.7</span>   <span class="c1"># Set your desired left boundary (in nm^-1)</span>
+<span class="n">right_qip</span> <span class="o">=</span> <span class="mf">0.7</span>   <span class="c1"># Set your desired right boundary (in nm^-1)</span>
+
+<span class="c1"># Define the bottom and top boundaries for the in-plane integration profile (I vs qip)</span>
+<span class="c1"># -&gt; Black rectangle (integration along qip within this qoop window)</span>
 <span class="n">bottom_qoop</span> <span class="o">=</span> <span class="mf">0.3</span>   <span class="c1"># Bottom boundary (in nm^-1)</span>
 <span class="n">top_qoop</span> <span class="o">=</span> <span class="mf">0.7</span>      <span class="c1"># Top boundary (in nm^-1)</span>
+
+<span class="c1"># =========================================================</span>
 
 <span class="o">...</span>
 
@@ -499,19 +493,16 @@ document.write(`
 
 </pre></div>
 </div>
-<p>The in-plane and out-of-plane intensity profiles will be generated for each image individually. In the final plots, the two out-of-plane datasets will be combined to remove gaps caused by dead zones.</p>
+<p>The in-plane and out-of-plane intensity profiles will be generated for each image individually. In the final plots, the datasets will be combined to remove gaps caused by dead zones.</p>
 <p>In your further analysis, you can choose whether to:</p>
 <ul class="simple">
-<li><p>keep both datasets separate,</p></li>
-<li><p>merge them, using the second image to fill the missing data.</p></li>
+<li><p>keep both datasets separate, if for example there is a mismatch between images A and B (beam damage, possibly),</p></li>
+<li><p>use the merged one, if the comparison between A and B is satisfying.</p></li>
 </ul>
 <p><img alt="" src="../../../_images/ip-oop-integration-A.png" />
 <img alt="" src="../../../_images/ip-oop-integration-B.png" />
-<img alt="" src="../../../_images/ip-oop-integration-AB.png" /></p>
-</section>
-<section id="save-parameters">
-<h2>Save parameters<a class="headerlink" href="#save-parameters" title="Link to this heading">#</a></h2>
-<p>Finally, run the last cell to generate a text file with all the parameters saved.</p>
+<img alt="" src="../../../_images/ip-oop-integration-AB.png" />
+<img alt="" src="../../../_images/ip-oop-integration-merged.png" /></p>
 </section>
 </section>
 
@@ -546,12 +537,12 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="azimuthal-scan.html"
+       href="azimuthal-integration.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Azimuthal scan</p>
+        <p class="prev-next-title">Azimuthal integration</p>
       </div>
     </a>
     <a class="right-next"
@@ -579,10 +570,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#warning-out-of-plane-integration-is-often-not-rigorous">Warning: out-of-plane integration is often not rigorous</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#warning-integrations-needs-to-be-performed-in-q-xy-q-z">Warning: integrations needs to be performed in <span class="math notranslate nohighlight">\(q_{xy}/q_{z}\)</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-of-the-integration-area">Definition of the integration area</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#performing-the-integration">Performing the integration</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#save-parameters">Save parameters</a></li>
 </ul>
   </nav></div>
 
