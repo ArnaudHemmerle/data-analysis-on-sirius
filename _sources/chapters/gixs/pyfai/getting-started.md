@@ -25,7 +25,7 @@ Additional useful information will be required from the notebook, which we will 
 
 ## Download the tutorial repository
 
-Download the repository if it is not already done : [here](https://gitlab.synchrotron-soleil.fr/sirius-beamline/notebooks/tutorial_giwaxs_pyfai/-/archive/v1.0/tutorial_giwaxs_pyfai-v1.0.zip). We will start with the notebook named `giwaxs_analysis_pyfai.ipynb`. Open it in Jupyter, and check that you have all the right packages installed by running the first code cell. Install the missing packages.
+Download the repository if it is not already done : [here](https://gitlab.synchrotron-soleil.fr/sirius-beamline/notebooks/tutorial_giwaxs_pyfai/-/archive/v1.1/tutorial_giwaxs_pyfai-v1.1.zip). We will start with the notebook named `giwaxs_analysis_pyfai.ipynb`. Open it in Jupyter, and check that you have all the right packages installed by running the first code cell. Install the missing packages.
 
 ```python
 import os

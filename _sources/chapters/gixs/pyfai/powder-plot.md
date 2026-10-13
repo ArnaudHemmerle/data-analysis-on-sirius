@@ -12,7 +12,7 @@ npt_powder_plot = 600
 
 ```
 
-Running the cell will generate the powder plot in q-space as well as in 2$\theta$.
+Running the cell will generate the powder plot in q-space as well as in 2$\theta$. The 2$\theta$ plot is calculated for a wavelength of 1.54 A, to enable direct comparison with lab XRD.
 
 Additionally, `dat` files containing the corresponding data for further analysis will be generated.
 

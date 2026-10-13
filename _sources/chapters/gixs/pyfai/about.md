@@ -8,7 +8,7 @@ PyFAI is a Python library for the azimuthal integration of X-ray scattering data
 
 PyFAI is a scientific library built around IPython and NumPy, designed for data analysis either interactively—such as in Jupyter Notebooks—or via scripts. Unlike GUI-based software, it offers significant advantages when processing hundreds of files or implementing custom analyses.
 
-This tutorial aims to help SIRIUS users efficiently use pyFAI to convert detector images into reciprocal space and perform integration. It is based on the notebooks available on [this](https://gitlab.synchrotron-soleil.fr/sirius-beamline/notebooks/tutorial_giwaxs_pyfai) repository. You should first download the last tagged version to follow the tutorial: [here](https://gitlab.synchrotron-soleil.fr/sirius-beamline/notebooks/tutorial_giwaxs_pyfai/-/archive/v1.0/tutorial_giwaxs_pyfai-v1.0.zip).
+This tutorial aims to help SIRIUS users efficiently use pyFAI to convert detector images into reciprocal space and perform integration. It is based on the notebooks available on [this](https://gitlab.synchrotron-soleil.fr/sirius-beamline/notebooks/tutorial_giwaxs_pyfai) repository. You should first download the last tagged version to follow the tutorial: [here](https://gitlab.synchrotron-soleil.fr/sirius-beamline/notebooks/tutorial_giwaxs_pyfai/-/archive/v1.1/tutorial_giwaxs_pyfai-v1.1.zip).
 
 ## Prerequisites
 To follow this tutorial, you should have:
